@@ -1416,3 +1416,223 @@ opacity: 0.7;
     overflow: hidden;
     margin-bottom: 5px;
 }
+
+  /* =========================================
+     TIER LAYOUT KARTU KARAKTER
+     Tier 1: header | Tier 2: body | Tier 3: panel info (tombol ℹ️)
+     ========================================= */
+
+  /* Tier 1: chip element + role */
+  .char-tags {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .char-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+  }
+
+  /* Tier 2: baris Star | Level | Power */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr 1fr;
+    text-align: center;
+    gap: 4px;
+    background: #252525;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 15px;
+    margin-top: 0;
+  }
+
+  .grid-3.main-stats {
+    margin-top: 15px;
+  }
+
+  .grid-value.star-value {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  .grid-2-row.single {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tombol mata (detail skill) — selalu terlihat */
+  .eye-btn {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    line-height: 1;
+    cursor: pointer;
+    margin-top: 2px;
+    padding: 0;
+    transition: all 0.2s;
+  }
+
+  .eye-btn:hover,
+  .char-card.show-skills .eye-btn {
+    background: var(--card-accent);
+    border-color: var(--card-accent);
+    color: #000;
+  }
+
+  /* Detail 4 skill */
+  .skill-detail {
+    display: none;
+    margin: 0 15px 15px;
+    padding: 8px 10px;
+    background: #252525;
+    border-radius: 8px;
+    text-align: left;
+    cursor: default;
+  }
+
+  .char-card.show-skills .skill-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .skill-item {
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #3a3a3a;
+  }
+
+  .skill-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .skill-item-head {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+
+  .skill-item-head span {
+    color: var(--card-accent);
+    font-weight: bold;
+  }
+
+  .skill-item-body {
+    font-size: 0.8rem;
+    line-height: 1.35;
+    color: var(--text-main);
+  }
+
+  .skill-item-body b {
+    display: block;
+    color: var(--card-accent);
+    font-size: 0.85rem;
+  }
+
+  .skill-empty {
+    color: #666;
+    font-style: italic;
+  }
+
+  /* Tier 3: panel info */
+  .info-panel {
+    display: none;
+    margin: 0 15px 15px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px dashed rgba(255, 255, 255, 0.18);
+    cursor: default;
+  }
+
+  .char-card.show-info .info-panel {
+    display: block;
+  }
+
+  .char-card.show-info .info-btn {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .info-section-title {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin: 0 0 6px;
+  }
+
+  .info-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .info-wear {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    text-align: center;
+  }
+
+  .info-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .wear-empty {
+    opacity: 0.35;
+  }
+
+  /* Form edit tambahan */
+  .edit-wear {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    margin: 6px 15px;
+  }
+
+  .edit-skill-info {
+    display: grid;
+    gap: 6px;
+    margin: 6px 15px;
+  }
+
+  .edit-skill-info textarea {
+    resize: vertical;
+    font-family: inherit;
+    font-size: 0.8rem;
+  }
+
+  /* Tombol import/export di toolbar */
+  #filter-controls .spacer {
+    flex: 1;
+  }
+
+  #import-button,
+  #export-button {
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    background: #333;
+    color: var(--text-main);
+    border: 1px solid #555;
+  }
+
+  #import-button:hover,
+  #export-button:hover {
+    border-color: var(--accent);
+  }

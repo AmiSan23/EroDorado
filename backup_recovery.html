@@ -96,6 +96,7 @@
         </div>
     </div>
 
+    <script src="character_data.js"></script>
     <script>
         const CHAR_STORAGE_KEY = 'CHARACTER_DATA_V1';
         const ENEMY_STORAGE_KEY = 'ENEMY_DATA_V1';
@@ -118,6 +119,23 @@
             URL.revokeObjectURL(url);
         }
 
+        function downloadText(text, filename) {
+            const blob = new Blob([text], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename + '_' + new Date().toISOString().slice(0, 10) + '.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Backup karakter selalu ditulis dalam format grouped: element > role > rank > [karakter]
+        function charactersToGroupedText(flat) {
+            return stringifyGrouped(groupCharacters(flat));
+        }
+
         function setupCopy(btnId, areaId) {
             const btn = document.getElementById(btnId);
             const area = document.getElementById(areaId);
@@ -136,15 +154,15 @@
         document.getElementById('backup-btn').addEventListener('click', () => {
             const data = getStorageData(CHAR_STORAGE_KEY);
             if (data.length === 0) return alert("No Character data found.");
-            downloadJSON(data, 'characters_backup');
-            document.getElementById('backup-status').innerText = `✅ ${data.length} characters downloaded.`;
+            downloadText(charactersToGroupedText(data), 'characters_backup');
+            document.getElementById('backup-status').innerText = `✅ ${data.length} characters downloaded (grouped format).`;
         });
 
         document.getElementById('generate-json-btn').addEventListener('click', () => {
             const data = getStorageData(CHAR_STORAGE_KEY);
             const container = document.getElementById('json-output-container');
             const area = document.getElementById('json-output');
-            area.value = JSON.stringify(data, null, 2);
+            area.value = data.length ? charactersToGroupedText(data) : '';
             container.style.display = 'block';
         });
         setupCopy('copy-json-btn', 'json-output');
@@ -157,9 +175,12 @@
             const reader = new FileReader();
             reader.onload = (e) => {
                 try {
-                    const imported = JSON.parse(e.target.result);
-                    // Karakter biasanya punya properti 'element' atau 'power'
-                    if (!Array.isArray(imported) || (imported.length > 0 && !imported[0].element)) {
+                    const parsed = JSON.parse(e.target.result);
+                    // Terima format grouped (baru) maupun array flat (lama)
+                    let imported;
+                    try { imported = migrate(normalizeImported(parsed)); }
+                    catch { throw new Error("Format salah. Ini bukan file backup Karakter."); }
+                    if (imported.length === 0 || !imported.every(c => c && c.name && c.element)) {
                         throw new Error("Format salah. Ini bukan file backup Karakter.");
                     }
                     if (confirm(`Overwrite characters with ${imported.length} new entries?`)) {

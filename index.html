@@ -5,47 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Character Collection</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* ===== Tambahan untuk layout bertingkat (tier) =====
-           Boleh dipindah ke style.css kalau mau. */
-
-        /* Tier 1: chip element + role di header */
-        .char-tags { display: flex; gap: 6px; justify-content: flex-end; flex-wrap: wrap; margin-top: 4px; }
-        .char-tag {
-            font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px;
-            background: rgba(0, 0, 0, 0.35); color: #fff; letter-spacing: .2px;
-        }
-
-        /* Tier 2: baris Star | Level | Power */
-        .grid-3 { display: grid; grid-template-columns: 1.3fr 0.7fr 1fr; gap: 4px; }
-        .grid-value.star-value { font-size: 15px; letter-spacing: 1px; white-space: nowrap; }
-
-        /* Shards satu baris penuh */
-        .grid-2-row.single { grid-template-columns: 1fr; }
-        .grid-2-row.single > .grid-item { width: 100%; flex: 1; }
-
-        /* Tier 3: panel info (tersembunyi sampai tombol ℹ️ ditekan) */
-        .info-panel {
-            display: none; margin-top: 8px; padding: 10px 12px; border-radius: 10px;
-            background: rgba(255, 255, 255, 0.05); border: 1px dashed rgba(255, 255, 255, 0.18);
-        }
-        .char-card.show-info .info-panel { display: block; }
-        .info-btn.on { outline: 2px solid currentColor; border-radius: 6px; }
-        .info-section-title { font-size: 11px; opacity: .7; margin: 0 0 6px; }
-        .info-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 10px; }
-        .info-wear { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
-        .info-cell { display: flex; flex-direction: column; align-items: center; gap: 2px; }
-        .info-cell .grid-label { font-size: 11px; }
-        .info-cell .grid-value { font-size: 16px; }
-        .wear-empty { opacity: .35; }
-
-        /* Form edit: bagian wear */
-        .edit-wear { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin: 6px 0; }
-
-        /* Toolbar import/export */
-        #filter-controls .spacer { flex: 1; }
-        #filter-controls .tool-btn { margin-left: 6px; }
-    </style>
 </head>
 <body>
     <div id="sidebar">
@@ -88,120 +47,11 @@
         <div id="load-error"></div>
     </div>
 
+  <script src="character_data.js"></script>
   <script>
     // Konstanta kunci penyimpanan (format di localStorage tetap flat, supaya halaman lain tidak rusak)
     const STORAGE_KEY = 'CHARACTER_DATA_V1';
     let charactersData = []; 
-
-    // --- URUTAN KELOMPOK (dipakai untuk sort default & export) ---
-    const ELEMENT_ORDER = ["Fire", "Wind", "Water", "Light", "Dark"];
-    const ROLE_ORDER    = ["Fighter", "Assassin", "Defender", "Support", "Healer"];
-    const RANK_ORDER    = ["SSRr", "SSR", "SR", "R"];
-    const WEAR_KEYS     = ["bracelet", "bikini", "hat", "sandals"];
-    const orderIdx = (list, v) => { const i = list.indexOf(v); return i === -1 ? 99 : i; };
-
-    // Power bisa "162K", "1.2M", atau "56.890" (titik = pemisah ribuan)
-    function parsePower(p) {
-        let s = String(p).toUpperCase().replace(/,/g, '').replace(/\s/g, '');
-        if (s.endsWith('K')) return parseFloat(s) * 1000;
-        if (s.endsWith('M')) return parseFloat(s) * 1000000;
-        if (/^\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, '');
-        return parseFloat(s) || 0;
-    }
-
-    // =====================================================
-    //  KONVERSI JSON:  flat  <->  grouped (element>role>rank>[...])
-    // =====================================================
-    function flattenGrouped(grouped) {
-        const out = [];
-        for (const [element, roles] of Object.entries(grouped)) {
-            for (const [role, ranks] of Object.entries(roles)) {
-                for (const [rank, list] of Object.entries(ranks)) {
-                    for (const c of list) {
-                        const sk = c.skills || [];
-                        const wear = c.wear || {};
-                        const flat = {
-                            name: c.name, rank, element, role,
-                            level: c.level ?? 1,
-                            intimacy: c.intimacy ?? 1,
-                            star: c.star ?? 1,
-                            skillOneLevel: sk[0] ?? 1,
-                            skillTwoLevel: sk[1] ?? 1,
-                            skillThreeLevel: sk[2] ?? 0,
-                            skillFourLevel: sk[3] ?? 0,
-                            cardLevel: c.card?.lv ?? 0,
-                            cardStar: c.card?.star ?? 0,
-                            power: c.power ?? "0",
-                            shards: c.shards?.cur ?? 0,
-                            shardMax: c.shards?.max ?? 0
-                        };
-                        WEAR_KEYS.forEach(k => flat[k] = wear[k] ?? 'e'); // 'e' = kosong (kompatibel halaman lain)
-                        if (c.skillProgress) flat.skillProgress = c.skillProgress;
-                        out.push(flat);
-                    }
-                }
-            }
-        }
-        return out;
-    }
-
-    function groupCharacters(flat) {
-        const g = {};
-        flat.forEach(c => {
-            const compact = {
-                name: c.name,
-                star: c.star,
-                skills: [c.skillOneLevel, c.skillTwoLevel, c.skillThreeLevel, c.skillFourLevel],
-                power: c.power,
-                level: c.level,
-                shards: { cur: parseInt(c.shards) || 0, max: parseInt(c.shardMax) || 0 },
-                card: { lv: c.cardLevel, star: c.cardStar },
-                intimacy: c.intimacy,
-                wear: Object.fromEntries(WEAR_KEYS.map(k => [k, (c[k] && c[k] !== 'e') ? c[k] : null]))
-            };
-            if (c.skillProgress) compact.skillProgress = c.skillProgress;
-            ((g[c.element] ??= {})[c.role] ??= {})[c.rank] ??= [];
-            g[c.element][c.role][c.rank].push(compact);
-        });
-        return g;
-    }
-
-    // Cetak JSON rapi: 1 karakter = 1 baris
-    function stringifyGrouped(g) {
-        const L = ['{'];
-        const els = Object.keys(g).sort((a, b) => orderIdx(ELEMENT_ORDER, a) - orderIdx(ELEMENT_ORDER, b));
-        els.forEach((el, i) => {
-            L.push(`  ${JSON.stringify(el)}: {`);
-            const roles = Object.keys(g[el]).sort((a, b) => orderIdx(ROLE_ORDER, a) - orderIdx(ROLE_ORDER, b));
-            roles.forEach((ro, j) => {
-                L.push(`    ${JSON.stringify(ro)}: {`);
-                const ranks = Object.keys(g[el][ro]).sort((a, b) => orderIdx(RANK_ORDER, a) - orderIdx(RANK_ORDER, b));
-                ranks.forEach((rk, k) => {
-                    L.push(`      ${JSON.stringify(rk)}: [`);
-                    const list = [...g[el][ro][rk]].sort((a, b) => parsePower(b.power) - parsePower(a.power));
-                    list.forEach((c, m) => L.push(`        ${JSON.stringify(c)}${m < list.length - 1 ? ',' : ''}`));
-                    L.push(`      ]${k < ranks.length - 1 ? ',' : ''}`);
-                });
-                L.push(`    }${j < roles.length - 1 ? ',' : ''}`);
-            });
-            L.push(`  }${i < els.length - 1 ? ',' : ''}`);
-        });
-        L.push('}');
-        return L.join('\n');
-    }
-
-    // Terima format lama (array) maupun baru (object bertingkat)
-    function normalizeImported(parsed) {
-        return Array.isArray(parsed) ? parsed : flattenGrouped(parsed);
-    }
-
-    function migrate(list) {
-        list.forEach(char => {
-            if (!char.skillProgress) char.skillProgress = { tracked: false, skill: 'skillTwo', current: 0, max: 1000 };
-            WEAR_KEYS.forEach(k => { if (char[k] === undefined || char[k] === null) char[k] = 'e'; });
-        });
-        return list;
-    }
 
     // --- FUNGSI IKON BINTANG ---
     function generateStarIcons(currentStar) {
@@ -232,6 +82,15 @@
         const skillProgressPercentage = Math.min((skillProgress.current / skillProgress.max) * 100, 100);
         const skillNameMap = { skillOne: 'Skill 1', skillTwo: 'Skill 2', skillThree: 'Skill 3' };
         const trackedSkillName = skillNameMap[skillProgress.skill] || 'Skill';
+
+        const skillLevels = [data.skillOneLevel, data.skillTwoLevel, data.skillThreeLevel, data.skillFourLevel];
+        const skillDetailHTML = skillLevels.map((lv, i) => {
+            const info = (data.skillInfo || [])[i] || '';
+            return `<div class="skill-item">
+                        <div class="skill-item-head">Skill ${i + 1} · Lv <span>${lv}</span></div>
+                        <div class="skill-item-body">${info ? safeInfo(info) : '<span class="skill-empty">Belum ada info</span>'}</div>
+                    </div>`;
+        }).join('');
 
         const wearLabels = { bracelet: 'Bracelet', bikini: 'Bikini', hat: 'Hat', sandals: 'Sandals' };
         const wearHTML = WEAR_KEYS.map(k => {
@@ -273,12 +132,14 @@
                 </div>
 
                 <div class="grid-5">
-                    <div class="label grid-item" style="margin-top: 5px;">Skills</div>
+                    <div class="label grid-item" style="margin-top: 5px;">Skills <button class="eye-btn" title="Lihat detail skill" onclick="toggleSkillInfo(${index}, event)">👁</button></div>
                     <div class="grid-item"><span class="grid-label">S1</span><span class="grid-value">${data.skillOneLevel}</span></div>
                     <div class="grid-item"><span class="grid-label">S2</span><span class="grid-value">${data.skillTwoLevel}</span></div>
                     <div class="grid-item"><span class="grid-label">S3</span><span class="grid-value">${data.skillThreeLevel}</span></div>
                     <div class="grid-item"><span class="grid-label">S4</span><span class="grid-value">${data.skillFourLevel}</span></div>
                 </div>
+
+                <div class="skill-detail">${skillDetailHTML}</div>
 
                 <div class="grid-2-row skill-progress-details">
                     <div class="grid-item" style="border:none; padding:0;">
@@ -386,6 +247,13 @@
                     </div>
                 </div>
 
+                <div class="edit-skill-info">
+                    ${[0, 1, 2, 3].map(i => `
+                        <div><span class="grid-label">Skill ${i + 1} info  (&lt;b&gt;summary&lt;/b&gt;deskripsi)</span>
+                            <textarea class="edit-input" id="edit-skillInfo${i}-${index}" rows="2">${(data.skillInfo || [])[i] || ''}</textarea>
+                        </div>`).join('')}
+                </div>
+
                 <div class="edit-wear">
                     ${WEAR_KEYS.map(k => `
                         <div class="grid-item"><span class="grid-label">${wearLabels[k]}</span>
@@ -434,7 +302,11 @@
         event.stopPropagation();
         const card = document.getElementById(`card-${index}`);
         card.classList.toggle('show-info');
-        card.querySelector('.info-btn').classList.toggle('on', card.classList.contains('show-info'));
+    }
+
+    function toggleSkillInfo(index, event) {
+        event.stopPropagation();
+        document.getElementById(`card-${index}`).classList.toggle('show-skills');
     }
 
     function toggleSkillProgress(index, event) {
@@ -482,6 +354,7 @@
         updatedChar.cardLevel = parseInt(val('edit-cardLevel')) || 0;
         updatedChar.cardStar = parseInt(val('edit-cardStar')) || 0;
         WEAR_KEYS.forEach(k => { updatedChar[k] = val(`edit-${k}`).trim() || 'e'; });
+        updatedChar.skillInfo = [0, 1, 2, 3].map(i => val(`edit-skillInfo${i}`).trim());
 
         updatedChar.skillProgress = { ...updatedChar.skillProgress };
         updatedChar.skillProgress.skill = val('edit-trackedSkill');
@@ -535,7 +408,9 @@
     }
 
     function showError(msg) {
-        document.getElementById('load-error').textContent = msg;
+        const el = document.getElementById('load-error');
+        el.textContent = msg;
+        el.style.display = msg ? 'block' : 'none';
     }
 
     async function loadData() {
