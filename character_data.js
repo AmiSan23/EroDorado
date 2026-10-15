@@ -46,6 +46,7 @@ function flattenGrouped(grouped) {
                         skillThreeLevel: lv(2) ?? 0,
                         skillFourLevel: lv(3) ?? 0,
                         skillInfo: [0, 1, 2, 3].map(i => (typeof sk[i] === 'object' && sk[i]?.info) || ''),
+                        skillIcon: [0, 1, 2, 3].map(i => (typeof sk[i] === 'object' && sk[i]?.icon) || ''),
                         cardLevel: c.card?.lv ?? 0,
                         cardStar: c.card?.star ?? 0,
                         power: c.power ?? "0",
@@ -70,7 +71,7 @@ function groupCharacters(flat) {
         const compact = {
             name: c.name,
             star: c.star,
-            skills: SKILL_KEYS.map((k, i) => ({ lv: c[k], info: c.skillInfo?.[i] || '' })),
+            skills: SKILL_KEYS.map((k, i) => ({ lv: c[k], icon: c.skillIcon?.[i] || '', info: c.skillInfo?.[i] || '' })),
             power: c.power,
             level: c.level,
             shards: { cur: parseInt(c.shards) || 0, max: parseInt(c.shardMax) || 0 },
@@ -119,6 +120,7 @@ function migrate(list) {
     list.forEach(char => {
         if (!char.skillProgress) char.skillProgress = { tracked: false, skill: 'skillTwo', current: 0, max: 1000 };
         if (!Array.isArray(char.skillInfo)) char.skillInfo = ['', '', '', ''];
+        if (!Array.isArray(char.skillIcon)) char.skillIcon = ['', '', '', ''];
         WEAR_KEYS.forEach(k => { if (char[k] === undefined || char[k] === null) char[k] = 'e'; });
     });
     return list;

@@ -76,6 +76,8 @@
         return starsHtml;
     }
 
+    const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
     // --- GENERATE HTML MODE BACA (READ-ONLY) ---
     //  Tier 1: img, nama, element, role, rank        (header)
     //  Tier 2: star, skills, power, level, shards    (body)
@@ -100,7 +102,7 @@
         const skillDetailHTML = skillLevels.map((lv, i) => {
             const info = (data.skillInfo || [])[i] || '';
             return `<div class="skill-item">
-                        <div class="skill-item-head">Skill ${i + 1} · Lv <span>${lv}</span></div>
+                        <div class="skill-item-head">${esc((data.skillIcon || [])[i])} Skill ${i + 1} · Lv <span>${lv}</span></div>
                         <div class="skill-item-body">${info ? safeInfo(info) : '<span class="skill-empty">Belum ada info</span>'}</div>
                     </div>`;
         }).join('');
@@ -146,10 +148,10 @@
 
                 <div class="grid-5">
                     <div class="label grid-item" style="margin-top: 5px;">Skills <button class="eye-btn" title="Lihat detail skill" onclick="toggleSkillInfo(${index}, event)">👁</button></div>
-                    <div class="grid-item"><span class="grid-label">S1</span><span class="grid-value">${data.skillOneLevel}</span></div>
-                    <div class="grid-item"><span class="grid-label">S2</span><span class="grid-value">${data.skillTwoLevel}</span></div>
-                    <div class="grid-item"><span class="grid-label">S3</span><span class="grid-value">${data.skillThreeLevel}</span></div>
-                    <div class="grid-item"><span class="grid-label">S4</span><span class="grid-value">${data.skillFourLevel}</span></div>
+                    <div class="grid-item"><span class="grid-label">S1</span><span class="grid-value">${data.skillOneLevel}</span><span class="skill-icon">${esc((data.skillIcon || [])[0])}</span></div>
+                    <div class="grid-item"><span class="grid-label">S2</span><span class="grid-value">${data.skillTwoLevel}</span><span class="skill-icon">${esc((data.skillIcon || [])[1])}</span></div>
+                    <div class="grid-item"><span class="grid-label">S3</span><span class="grid-value">${data.skillThreeLevel}</span><span class="skill-icon">${esc((data.skillIcon || [])[2])}</span></div>
+                    <div class="grid-item"><span class="grid-label">S4</span><span class="grid-value">${data.skillFourLevel}</span><span class="skill-icon">${esc((data.skillIcon || [])[3])}</span></div>
                 </div>
 
                 <div class="skill-detail">${skillDetailHTML}</div>
@@ -262,8 +264,11 @@
 
                 <div class="edit-skill-info">
                     ${[0, 1, 2, 3].map(i => `
-                        <div><span class="grid-label">Skill ${i + 1} info  (&lt;b&gt;summary&lt;/b&gt;deskripsi)</span>
-                            <textarea class="edit-input" id="edit-skillInfo${i}-${index}" rows="2">${(data.skillInfo || [])[i] || ''}</textarea>
+                        <div><span class="grid-label">Skill ${i + 1} — icon &amp; info (&lt;b&gt;summary&lt;/b&gt;deskripsi)</span>
+                            <div class="edit-skill-row">
+                                <input type="text" class="edit-input edit-skill-icon" id="edit-skillIcon${i}-${index}" value="${esc((data.skillIcon || [])[i])}" placeholder="🔥">
+                                <textarea class="edit-input" id="edit-skillInfo${i}-${index}" rows="2">${esc((data.skillInfo || [])[i])}</textarea>
+                            </div>
                         </div>`).join('')}
                 </div>
 
@@ -368,6 +373,7 @@
         updatedChar.cardStar = parseInt(val('edit-cardStar')) || 0;
         WEAR_KEYS.forEach(k => { updatedChar[k] = val(`edit-${k}`).trim() || 'e'; });
         updatedChar.skillInfo = [0, 1, 2, 3].map(i => val(`edit-skillInfo${i}`).trim());
+        updatedChar.skillIcon = [0, 1, 2, 3].map(i => val(`edit-skillIcon${i}`).trim());
 
         updatedChar.skillProgress = { ...updatedChar.skillProgress };
         updatedChar.skillProgress.skill = val('edit-trackedSkill');
