@@ -54,11 +54,24 @@
     let charactersData = []; 
 
     // --- FUNGSI IKON BINTANG ---
+    // Max 12 bintang, tampil selalu 6 slot.
+    // 1-6  : bintang emas sebanyak nilainya.
+    // 7-12 : (nilai - 6) slot pertama berubah jadi ungu platinum, menimpa bintang emas.
+    //        Contoh 8 bintang = 2 ungu + 4 emas.
     function generateStarIcons(currentStar) {
-        const maxStar = 6;
+        const slots = 6;
+        const total = Math.max(0, Math.min(parseInt(currentStar) || 0, 12));
+        const platinum = Math.max(0, total - slots);
+        const gold = Math.min(total, slots);
         let starsHtml = '';
-        for (let i = 0; i < maxStar; i++) {
-            starsHtml += `<span style="color: ${i < currentStar ? 'gold' : '#444'};">${i < currentStar ? '★' : '☆'}</span>`;
+        for (let i = 0; i < slots; i++) {
+            if (i < platinum) {
+                starsHtml += '<span style="color:#c58bff; text-shadow:0 0 5px #9c4dff, 0 0 2px #e6ccff;">★</span>';
+            } else if (i < gold) {
+                starsHtml += '<span style="color:gold;">★</span>';
+            } else {
+                starsHtml += '<span style="color:#444;">☆</span>';
+            }
         }
         return starsHtml;
     }
@@ -192,7 +205,7 @@
                      </div>
                     <div class="header-right">
                         <span class="grid-item char-name">${data.name}</span>
-                        <input type="number" class="edit-input" id="edit-star-${index}" value="${data.star}" min="1" max="6" placeholder="Star">
+                        <input type="number" class="edit-input" id="edit-star-${index}" value="${data.star}" min="1" max="12" placeholder="Star">
                     </div>
                 </div>
                 
