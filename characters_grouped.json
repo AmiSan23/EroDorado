@@ -1,0 +1,124 @@
+{
+  "Fire": {
+    "Fighter": {
+      "SSRr": [
+        {"name": "Lina", "star": 1, "skills": [2, 1, 1, 2], "power": "162K", "level": 1, "shards": {"cur": 13, "max": 20}, "card": {"lv": 20, "star": 1}, "intimacy": 1, "wear": {"bracelet": "T6", "bikini": "T6", "hat": "T6", "sandals": "T6"}},
+        {"name": "Reina", "star": 1, "skills": [1, 1, 0, 0], "power": "20.800", "level": 1, "shards": {"cur": 0, "max": 20}, "card": {"lv": 0, "star": 0}, "intimacy": 1, "wear": {"bracelet": null, "bikini": null, "hat": null, "sandals": null}}
+      ],
+      "SSR": [
+        {"name": "Ayaka", "star": 1, "skills": [1, 1, 1, 1], "power": "49.120", "level": 1, "shards": {"cur": 0, "max": 20}, "card": {"lv": 5, "star": 1}, "intimacy": 1, "wear": {"bracelet": null, "bikini": null, "hat": null, "sandals": null}}
+      ],
+      "SR": [
+        {"name": "Azusa", "star": 2, "skills": [2, 1, 1, 1], "power": "97.550", "level": 1, "shards": {"cur": 16, "max": 50}, "card": {"lv": 14, "star": 6}, "intimacy": 1, "wear": {"bracelet": "T5", "bikini": "T6", "hat": null, "sandals": null}},
+        {"name": "Nanako", "star": 2, "skills": [2, 1, 1, 1], "power": "56.890", "level": 1, "shards": {"cur": 4, "max": 50}, "card": {"lv": 18, "star": 4}, "intimacy": 1, "wear": {"bracelet": null, "bikini": null, "hat": null, "sandals": null}}
+      ]
+    },
+    "Assassin": {
+      "SSR": [
+        {"name": "Savannah", "star": 1, "skills": [2, 1, 1, 2], "power": "146K", "level": 1, "shards": {"cur": 12, "max": 20}, "card": {"lv": 20, "star": 1}, "intimacy": 1, "wear": {"bracelet": "T6", "bikini": "T6", "hat": "T6", "sandals": "T6"}}
+      ]
+    },
+    "Defender": {
+      "SSR": [
+        {"name": "Kana", "star": 1, "skills": [1, 1, 0, 1], "power": "21.350", "level": 1, "shards": {"cur": 12, "max": 20}, "card": {"lv": 1, "star": 1}, "intimacy": 1, "wear": {"bracelet": null, "bikini": null, "hat": null, "sandals": null}}
+      ],
+      "R": [
+        {"name": "Hinata", "star": 2, "skills": [2, 1, 1, 1], "power": "39.040", "level": 1, "shards": {"cur": 6, "max": 50}, "card": {"lv": 10, "star": 6}, "intimacy": 1, "wear": {"bracelet": null, "bikini": null, "hat": null, "sandals": null}}
+      ]
+    },
+    "Support": {
+      "R": [
+        {"name": "Kagura", "star": 2, "skills": [1, 1, 1, 1], "power": "36.490", "level": 1, "shards": {"cur": 13, "max": 50}, "card": {"lv": 2, "star": 6}, "intimacy": 1, "wear": {"bracelet": null, "bikini": null, "hat": null, "sandals": null}}
+      ]
+    }
+  },
+  "Wind": {
+    "Fighter": {
+      "SSR": [
+        {"name": "Tsubasa", "star": 1, "skills": [2, 1, 1, 1], "power": "147K", "level": 1, "shards": {"cur": 12, "max": 20}, "card": {"lv": 10, "star": 1}, "intimacy": 1, "wear": {"bracelet": "T6", "bikini": "T6", "hat": "T6", "sandals": "T6"}}
+      ],
+      "SR": [
+        {"name": "Hiyori", "star": 2, "skills": [2, 1, 1, 2], "power": "125K", "level": 1, "shards": {"cur": 20, "max": 50}, "card": {"lv": 20, "star": 6}, "intimacy": 1, "wear": {"bracelet": "T5", "bikini": "T6", "hat": "T5", "sandals": "T5"}}
+      ],
+      "R": [
+        {"name": "Kanade", "star": 2, "skills": [1, 1, 1, 1], "power": "44.280", "level": 1, "shards": {"cur": 12, "max": 50}, "card": {"lv": 17, "star": 6}, "intimacy": 1, "wear": {"bracelet": null, "bikini": null, "hat": null, "sandals": null}}
+      ]
+    },
+    "Assassin": {
+      "R": [
+        {"name": "Lisa", "star": 2, "skills": [1, 1, 1, 1], "power": "124K", "level": 1, "shards": {"cur": 12, "max": 50}, "card": {"lv": 10, "star": 6}, "intimacy": 1, "wear": {"bracelet": "T6", "bikini": "T6", "hat": "T6", "sandals": "T6"}}
+      ]
+    },
+    "Defender": {
+      "SSR": [
+        {"name": "Nanami", "star": 1, "skills": [1, 1, 1, 1], "power": "46.630", "level": 1, "shards": {"cur": 0, "max": 20}, "card": {"lv": 2, "star": 2}, "intimacy": 1, "wear": {"bracelet": null, "bikini": null, "hat": null, "sandals": null}}
+      ]
+    },
+    "Support": {
+      "R": [
+        {"name": "Emiko", "star": 2, "skills": [1, 1, 0, 1], "power": "15.490", "level": 1, "shards": {"cur": 25, "max": 50}, "card": {"lv": 1, "star": 1}, "intimacy": 1, "wear": {"bracelet": null, "bikini": null, "hat": null, "sandals": null}}
+      ]
+    },
+    "Healer": {
+      "SSR": [
+        {"name": "Yui", "star": 2, "skills": [1, 1, 1, 0], "power": "135K", "level": 1, "shards": {"cur": 4, "max": 50}, "card": {"lv": 0, "star": 0}, "intimacy": 1, "wear": {"bracelet": "T6", "bikini": "T6", "hat": "T6", "sandals": "T6"}}
+      ],
+      "SR": [
+        {"name": "Kiyomi", "star": 1, "skills": [1, 1, 0, 1], "power": "13.440", "level": 1, "shards": {"cur": 5, "max": 50}, "card": {"lv": 1, "star": 1}, "intimacy": 1, "wear": {"bracelet": null, "bikini": null, "hat": null, "sandals": null}}
+      ]
+    }
+  },
+  "Water": {
+    "Fighter": {
+      "SSR": [
+        {"name": "Maiko", "star": 1, "skills": [2, 1, 1, 1], "power": "82.730", "level": 1, "shards": {"cur": 12, "max": 20}, "card": {"lv": 1, "star": 1}, "intimacy": 1, "wear": {"bracelet": null, "bikini": "T6", "hat": null, "sandals": null}}
+      ]
+    },
+    "Assassin": {
+      "SSR": [
+        {"name": "Naomi", "star": 1, "skills": [1, 1, 1, 1], "power": "125K", "level": 1, "shards": {"cur": 0, "max": 20}, "card": {"lv": 1, "star": 3}, "intimacy": 1, "wear": {"bracelet": "T5", "bikini": "T6", "hat": "T5", "sandals": "T5"}}
+      ]
+    },
+    "Defender": {
+      "SR": [
+        {"name": "Marina", "star": 2, "skills": [1, 1, 1, 1], "power": "47.880", "level": 1, "shards": {"cur": 5, "max": 50}, "card": {"lv": 1, "star": 3}, "intimacy": 1, "wear": {"bracelet": null, "bikini": null, "hat": null, "sandals": null}}
+      ],
+      "R": [
+        {"name": "Ayumi", "star": 2, "skills": [1, 1, 1, 1], "power": "120K", "level": 1, "shards": {"cur": 4, "max": 50}, "card": {"lv": 10, "star": 6}, "intimacy": 1, "wear": {"bracelet": "T6", "bikini": "T6", "hat": "T6", "sandals": "T6"}}
+      ]
+    },
+    "Support": {
+      "SSR": [
+        {"name": "Misato", "star": 1, "skills": [1, 1, 0, 1], "power": "16.480", "level": 1, "shards": {"cur": 0, "max": 20}, "card": {"lv": 1, "star": 1}, "intimacy": 1, "wear": {"bracelet": null, "bikini": null, "hat": null, "sandals": null}}
+      ],
+      "R": [
+        {"name": "Chika", "star": 2, "skills": [1, 1, 1, 1], "power": "116K", "level": 1, "shards": {"cur": 10, "max": 50}, "card": {"lv": 4, "star": 6}, "intimacy": 1, "wear": {"bracelet": "T6", "bikini": "T6", "hat": "T6", "sandals": "T6"}}
+      ]
+    },
+    "Healer": {
+      "SSR": [
+        {"name": "Misaki", "star": 1, "skills": [1, 1, 0, 0], "power": "14.230", "level": 1, "shards": {"cur": 0, "max": 20}, "card": {"lv": 0, "star": 0}, "intimacy": 1, "wear": {"bracelet": null, "bikini": null, "hat": null, "sandals": null}}
+      ],
+      "SR": [
+        {"name": "Yukino", "star": 2, "skills": [2, 1, 1, 1], "power": "132K", "level": 1, "shards": {"cur": 20, "max": 50}, "card": {"lv": 10, "star": 6}, "intimacy": 1, "wear": {"bracelet": "T6", "bikini": "T6", "hat": "T6", "sandals": "T6"}}
+      ],
+      "R": [
+        {"name": "Sae", "star": 2, "skills": [2, 1, 1, 1], "power": "36.470", "level": 1, "shards": {"cur": 6, "max": 50}, "card": {"lv": 7, "star": 6}, "intimacy": 1, "wear": {"bracelet": null, "bikini": null, "hat": null, "sandals": null}}
+      ]
+    }
+  },
+  "Light": {
+    "Assassin": {
+      "SR": [
+        {"name": "Akane", "star": 1, "skills": [2, 1, 1, 2], "power": "136K", "level": 1, "shards": {"cur": 15, "max": 20}, "card": {"lv": 20, "star": 4}, "intimacy": 1, "wear": {"bracelet": "T6", "bikini": "T6", "hat": "T6", "sandals": "T6"}}
+      ]
+    }
+  },
+  "Dark": {
+    "Assassin": {
+      "SR": [
+        {"name": "Kirie", "star": 1, "skills": [2, 1, 1, 1], "power": "93.110", "level": 1, "shards": {"cur": 5, "max": 20}, "card": {"lv": 1, "star": 1}, "intimacy": 1, "wear": {"bracelet": "T6", "bikini": "T6", "hat": null, "sandals": null}}
+      ]
+    }
+  }
+}
