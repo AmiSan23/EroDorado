@@ -134,7 +134,7 @@
                         <span class="char-name">${data.name}</span>
                         <span class="char-tags">
                             <span class="char-tag">${data.element}</span>
-                            <span class="char-tag"><img src="icon/${data.role}.png"/></span>
+                            <span class="char-tag">${data.role}</span>
                         </span>
                     </div>
                 </div>
@@ -262,6 +262,15 @@
                     </div>
                 </div>
 
+                <div class="edit-skill-json">
+                    <span class="grid-label">Skill JSON (tempel array 4 skill: lv, icon, info)</span>
+                    <textarea class="edit-input" id="edit-skillJson-${index}" rows="4" spellcheck="false" placeholder='[{"lv":2,"icon":"🔥","info":"<b>Summary</b>Deskripsi"}, ... ]'></textarea>
+                    <div class="edit-skill-json-actions">
+                        <button type="button" class="btn-apply-json" onclick="applySkillJSON(${index})">Isi ke Skill 1-4</button>
+                        <span id="edit-skillJson-status-${index}" class="skill-json-status"></span>
+                    </div>
+                </div>
+
                 <div class="edit-skill-info">
                     ${[0, 1, 2, 3].map(i => `
                         <div><span class="grid-label">Skill ${i + 1} — icon &amp; info (&lt;b&gt;summary&lt;/b&gt;deskripsi)</span>
@@ -347,6 +356,32 @@
             if (el === currentData.element) option.selected = true;
             elementSelect.appendChild(option);
         });
+    }
+
+    // Ambil array skill dari textarea JSON, lalu isi ke kolom level / icon / info tiap skill.
+    // Hanya mengisi form; data baru tersimpan setelah klik "Simpan".
+    function applySkillJSON(index) {
+        const status = document.getElementById(`edit-skillJson-status-${index}`);
+        const setStatus = (msg, ok) => { status.textContent = msg; status.style.color = ok ? '#5cb85c' : '#ff5722'; };
+        try {
+            const raw = document.getElementById(`edit-skillJson-${index}`).value.trim();
+            if (!raw) throw new Error('Textarea JSON masih kosong.');
+            const arr = JSON.parse(raw);
+            if (!Array.isArray(arr)) throw new Error('Harus berupa array [ ... ].');
+            if (arr.length === 0 || arr.length > 4) throw new Error('Array harus berisi 1-4 skill.');
+            arr.forEach((s, i) => {
+                if (!s || typeof s !== 'object' || Array.isArray(s)) throw new Error(`Skill ${i + 1} harus berupa object.`);
+                if ('lv' in s && !Number.isFinite(Number(s.lv))) throw new Error(`Skill ${i + 1}: "lv" harus angka.`);
+            });
+            arr.forEach((s, i) => {
+                if ('lv' in s) document.getElementById(`edit-s${i + 1}-${index}`).value = parseInt(s.lv) || 0;
+                if ('icon' in s) document.getElementById(`edit-skillIcon${i}-${index}`).value = String(s.icon ?? '');
+                if ('info' in s) document.getElementById(`edit-skillInfo${i}-${index}`).value = String(s.info ?? '');
+            });
+            setStatus(`✅ ${arr.length} skill diisi ke form. Klik Simpan untuk menyimpan.`, true);
+        } catch (err) {
+            setStatus('❌ ' + err.message, false);
+        }
     }
 
     function cancelEdit(index) {

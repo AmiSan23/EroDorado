@@ -1,0 +1,1673 @@
+{
+ "Fire": {
+  "Fighter": {
+   "SSRr": [{
+    "name":"Sigrid","star":8,"skills":[{
+     "lv":3,"icon":"💥🔥","info":"<b>Memberikan 10% / 15% / 20% Attack Damage (tergantung level/peningkatan) selama 30 turn</b>Menghasilkan 90/125/160% damage kepada musuh di depan dan memiliki 30/45/60% peluang untuk menimbulkan efek Burn (Bakar)."
+    }, {
+     "lv":3,"icon":"💥🔥","info":"<b>Memberikan 10 / 15 / 20% Attack Damage selama 3 turn (putaran) tergantung level skill.</b>• Setelah menggunakan Main Skill, memiliki peluang 69% untuk memberikan 90/125/160% damage ke musuh di barisan belakang (enemies in the rear) dan peluang 30/45/60% untuk memberikan efek Burn (Bakar)."
+    }, {
+     "lv":3,"icon":"🗡️⬆️","info":"<b>Meningkatkan Attack (ATK UP) sebesar 5 / 7 / 10% selama 4 giliran (turns) tergantung pada level skill-nya.</b>Saat melakukan serangan dasar (basic attack), memiliki peluang 75% untuk memberikan ATK Up pada diri sendiri."
+    }, {
+     "lv":3,"icon":"💥🔥","info":"Menyerang semua target (All Targets) dan memberikan 50/60/70% damage.\nMemberikan tambahan 50/75/100% damage ke target yang terkena efek Burn kurang dari 4 Turn"
+    }],"power":"2638K","level":145,"shards": {
+     "cur":120,"max":150
+    },"card": {
+     "lv":80,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Lina","star":7,"skills":[{
+      "lv": 3,
+      "icon": "💥🐰",
+      "info": "Memberikan 190/220/250% damage kepada target utama dan 100/110/120% damage kepada target tambahan di antara 3 musuh acak. Memulihkan HP sebesar 30/40/50% dari damage yang diberikan."
+     },
+      {
+       "lv": 3,
+       "icon": "💥🐰",
+       "info": "Setelah menggunakan Main Skill, memiliki peluang 80% untuk menyerang 3 target acak, memberikan 180/190/200% damage ke target utama dan 110/120/130% damage ke target tambahan."
+      },
+      {
+       "lv": 3,
+       "icon": "🔥⬆️",
+       "info": "<b>Heat of Battle - Selama 10 turn, Attack Power 20/30/40% damage.</b>Aktif pada turn pertama - Menyerang 3 target acak - Memberikan 200/230/260% damage ke target utama dan 150/160/170% damage ke target tambahan, serta menimbulkan efek Special Flame (Aktif sekali)."
+      },
+      {
+       "lv": 2,
+       "icon": "🗡️⬆️",
+       "info": "<b>Attack Buff - Selama 5 turn: Attack UP sebesar 20/30/40%.</b>Meningkatkan buff Attack Power untuk diri sendiri selama 4 turn (Pada HiddenPiece Lv.41 skill akan Level Up)."
+      }],"power":"2201K","level":130,"shards": {
+      "cur":0,"max":100
+     },"card": {
+      "lv":20,"star":2
+     },"intimacy":7,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }},
+    {
+     "name":"Miyuki","star":3,"skills":[
+  {
+    "lv": 3,
+    "icon": "💥💔",
+    "info": "Memberikan 225/240/255% damage kepada musuh dengan HP terendah."
+  },
+  {
+    "lv": 3,
+    "icon": "💚🗡️⬆️",
+    "info": "<b>Attack Buff - Selama 7 turn: Attack UP sebesar 3/4/5% - Maksimal 5 Stack.</b>Saat dia mengalahkan musuh: Memulihkan 10/15/20% HP dan memberikan Attack Up selama 7 turn. Dapat ditumpuk (stack) hingga 5 kali."
+  },
+  {
+    "lv": 3,
+    "icon": "💥🔥",
+    "info": "Saat dia mengalahkan musuh: Langsung menyerang musuh dengan HP terendah sebesar 110/130/150% damage. Dijamin Critical Hit."
+  },
+  {
+    "lv": 3,
+    "icon": "💥🔫",
+    "info": "Memberikan 155/165/175% damage ke 2 musuh acak. Dijamin Critical Hit (Cooldown: 4 turn)."
+  }
+],"power":"1648K","level":130,"shards": {
+      "cur":39,"max":70
+     },"card": {
+      "lv":20,"star":1
+     },"intimacy":6,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }},
+    {
+     "name":"Kagura (Summer)","star":1,"skills":[{
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":13,"max":20
+     },"card": {
+      "lv":20,"star":1
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }},
+    {
+     "name":"Symmetra","star":1,"skills":[{
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":13,"max":20
+     },"card": {
+      "lv":20,"star":1
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}],
+   "SSR": [{
+    "name":"Ayaka","star":7,"skills":[
+  {
+    "lv": 2,
+    "icon": "💥🗡️",
+    "info": "Memberikan 225/240/255% damage kepada musuh di depannya."
+  },
+  {
+    "lv": 2,
+    "icon": "💥⚔️",
+    "info": "Memberikan 160/170/180% damage ke 2 musuh acak (Cooldown: 4 turn)."
+  },
+  {
+    "lv": 1,
+    "icon": "💥🔥",
+    "info": "Setelah menggunakan Basic Attack, memiliki peluang 30% untuk memberikan tambahan 100/105/110% damage ke satu musuh acak."
+  },
+  {
+    "lv": 3,
+    "icon": "💥🌙",
+    "info": "Memberikan 130/145/160% damage ke 3 musuh acak (Cooldown: 3 turn)."
+  }
+],"power":"1996K","level":130,"shards": {
+     "cur":52,"max":100
+    },"card": {
+     "lv":41,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}],
+   "SR": [{
+    "name":"Azusa","star":6,"skills":[
+  {
+    "lv": 2,
+    "icon": "💥🔥",
+    "info": "<b>Burn - Memberikan 10/15/20% Attack Damage selama 3 turn.</b>Memberikan 220/235/250% damage ke musuh acak di barisan depan (Front Row). Memiliki peluang 50/60/70% untuk memberikan efek Burn, yang menghasilkan True damage setara dengan persentase Attack caster per turn selama 3 turn."
+  },
+  {
+    "lv": 1,
+    "icon": "💥",
+    "info": "Memberikan 120/125/130% damage ke semua musuh di barisan depan (Front Row) (Cooldown: 3 turn)."
+  },
+  {
+    "lv": 1,
+    "icon": "🛡️⬆️",
+    "info": "<b>Additional Defense Power (Personal Passive) - Defense UP sebesar 3/5/7%.</b>Pasif — Meningkatkan Defense miliknya."
+  },
+  {
+    "lv": 2,
+    "icon": "💥",
+    "info": "Memberikan 120/125/130% damage ke semua musuh di barisan depan (Front Row) (Cooldown: 4 turn)."
+  }
+],"power":"1661K","level":130,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":20,"star":6
+    },"intimacy":6,"wear": {
+     "bracelet":"T5","bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Nanako","star":6,"skills":[{
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }],"power":"552K","level":50,"shards": {
+      "cur":0,"max":0
+     },"card": {
+      "lv":20,"star":6
+     },"intimacy":5,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}]
+  },
+  "Assassin": {
+   "SSRr": [{
+    "name":"Raven","star":4,"skills":[
+  {
+    "lv": 2,
+    "icon": "💥🔥",
+    "info": "<b>Burn - Memberikan 10/15/20% Attack Damage selama 3 turn.</b>Memberikan 140/160/180% damage ke musuh di barisan belakang dan memiliki peluang 30/40/50% untuk menimbulkan efek Burn."
+  },
+  {
+    "lv": 2,
+    "icon": "💥🦅",
+    "info": "Saat menggunakan Main Skill, memiliki peluang 69% untuk memicu serangan tambahan terhadap musuh dengan HP terendah, memberikan 180/230/280% damage, dan mengabaikan defense jika target terkena efek Burn."
+  },
+  {
+    "lv": 2,
+    "icon": "🪃🔥",
+    "info": "<b>Burn - Memberikan 10/15/20% Attack Damage selama 3 turn.</b>Saat menghindar, melakukan counterattack untuk memberikan 180/230/280% damage dan memiliki peluang 60/75/90% untuk menimbulkan efek Burn."
+  },
+  {
+    "lv": 3,
+    "icon": "🗡️⬆️💨",
+    "info": "<b>Attack Buff - Selama 3 turn: Attack UP sebesar 30/40/50% | Evasion Buff - Selama 3 turn: Evasion UP sebesar 10/20/30%.</b>Memberikan buff Attack Up dan Evasion Up pada diri sendiri (Cooldown: 4 turn)."
+  }
+],"power":"1665K","level":130,"shards": {
+     "cur":10,"max":90
+    },"card": {
+     "lv":41,"star":4
+    },"intimacy":6,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Savannah (Summer)","star":1,"skills":[{
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":12,"max":20
+     },"card": {
+      "lv":20,"star":1
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}],
+   "SSR": [{
+    "name":"Savannah","star":11,"skills":[{
+     "lv":3,"icon":"💥🔥","info":"<b>Memberikan 10 / 15 / 20% Damage Serangan (Attack Damage) selama 3 giliran.</b>Menghasilkan 175/185/195% damage ke 2 musuh acak, dengan peluang 40/50/60% untuk memberikan efek Burn."
+    }, {
+     "lv":3,"icon":"💀💪","info":"Saat dia mengalahkan musuh dengan serangan langsung (direct attack), memulihkan 20/30/40 Skill Gauge."
+    }, {
+     "lv":3,"icon":"💥🔥","info":"<b>Memberikan 10/15/20% Attack Damage per giliran selama 3 giliran.</b>Basic Attack menghasilkan 100/105/110% damage dan memiliki 25/30/40% peluang menimbulkan efek Burn."
+    }, {
+     "lv":3,"icon":"💥💘","info":"<b>Memberikan 10 / 15 / 20% Attack Damage selama 3 giliran.</b>Penetrasi Serangan memberikan 105/114/123% kerusakan ke target utama dan 240/253/267% kerusakan ke target tambahan. Memiliki 40/50/60% peluang untuk memberikan efek Burn, menghasilkan True Damage sebesar persentase dari Attack caster per giliran selama 3 giliran. Cooldown: 3 giliran."
+    }],"power":"2405K","level":145,"shards": {
+     "cur":0,"max":180
+    },"card": {
+     "lv":100,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Defender": {
+   "SSRr": [{
+    "name":"Coco","star":4,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }],"power":"1350K","level":95,"shards": {
+     "cur":56,"max":90
+    },"card": {
+     "lv":20,"star":3
+    },"intimacy":6,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Nova","star":2,"skills":[{
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }],"power":"1076K","level":85,"shards": {
+      "cur":30,"max":50
+     },"card": {
+      "lv":20,"star":1
+     },"intimacy":6,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }},
+    {
+     "name":"Kazura","star":2,"skills":[{
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }],"power":"863K","level":75,"shards": {
+      "cur":30,"max":50
+     },"card": {
+      "lv":20,"star":4
+     },"intimacy":6,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}],
+   "SSR": [{
+    "name":"Kana","star":9,"skills":[
+  {
+    "lv": 3,
+    "icon": "💥🔥",
+    "info": "<b>Burn - Memberikan 10/15/20% Attack Damage selama 3 turn.</b>Memberikan 180/187/195% damage ke semua musuh di barisan depan (Front Row). Memiliki peluang 30/40/50% untuk memberikan efek Burn, yang menghasilkan True damage setara dengan persentase Attack caster per turn selama 3 turn."
+  },
+  {
+    "lv": 3,
+    "icon": "🪃🔥",
+    "info": "<b>Burn - Memberikan 10/15/20% Attack Damage selama 3 turn.</b>Saat diserang: Memiliki 30% peluang untuk melakukan counterattack (serangan balik), memberikan 100/105/110% damage. Memiliki peluang 30/45/60% untuk memberikan efek Burn, yang menghasilkan True damage setara dengan persentase Attack caster per turn selama 3 turn."
+  },
+  {
+    "lv": 3,
+    "icon": "💚⬆️",
+    "info": "<b>HP Buff (Personal Passive) - HP UP sebesar 5/7/9%.</b>Pasif — Meningkatkan HP-nya."
+  },
+  {
+    "lv": 3,
+    "icon": "💚🔧",
+    "info": "Saat HP-nya turun di bawah 30%, memulihkan HP sebesar 400/550/700% dari Attack caster. Hanya aktif satu kali."
+  }
+],"power":"2106K","level":130,"shards": {
+     "cur":60,"max":160
+    },"card": {
+     "lv":41,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}],
+   "R": [{
+    "name":"Hinata","star":6,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }],"power":"467K","level":50,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":10,"star":6
+    },"intimacy":5,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Support": {
+   "SSRr": [{
+    "name":"Miko","star":2,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }],"power":"988K","level":85,"shards": {
+     "cur":30,"max":50
+    },"card": {
+     "lv":20,"star":1
+    },"intimacy":6,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Isadora","star":2,"skills":[{
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":13,"max":50
+     },"card": {
+      "lv":2,"star":6
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}],
+   "R": [{
+    "name":"Kagura","star":6,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }],"power":"456K","level":50,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":2,"star":6
+    },"intimacy":5,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Healer": {
+   "SSR": [{
+    "name":"Tomoe","star":3,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }],"power":"1426K","level":130,"shards": {
+     "cur":0,"max":70
+    },"card": {
+     "lv":41,"star":5
+    },"intimacy":6,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  }
+ },
+ "Wind": {
+  "Fighter": {
+   "SSRr": [{
+    "name":"Kuro (Summer)","star":1,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }],"power":"0","level":1,"shards": {
+     "cur":12,"max":20
+    },"card": {
+     "lv":10,"star":1
+    },"intimacy":1,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Soyul","star":1,"skills":[{
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":12,"max":20
+     },"card": {
+      "lv":10,"star":1
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}],
+   "SSR": [{
+    "name":"Tsubasa","star":8,"skills":[
+  {
+    "lv": 2,
+    "icon": "💥✨",
+    "info": "Memberikan 200/215/230% damage ke target utama dan 110/120/130% ke target acak tambahan."
+  },
+  {
+    "lv": 2,
+    "icon": "💥💫",
+    "info": "Hanya pada Turn Pertama — Menyerang 2 target: target utama menerima 250/275/300% damage, target kedua menerima 135/152/170% damage. (Efek satu kali)."
+  },
+  {
+    "lv": 2,
+    "icon": "🗡️⬆️",
+    "info": "<b>Additional Attack Power (Personal Passive) - Attack UP sebesar 3/5/7%.</b>Pasif — Meningkatkan Attack miliknya."
+  },
+  {
+    "lv": 3,
+    "icon": "💥🪶",
+    "info": "Memberikan 65/70/75% damage ke semua musuh (Cooldown: 3 turn)."
+  }
+],"power":"2085K","level":130,"shards": {
+     "cur":48,"max":150
+    },"card": {
+     "lv":41,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}],
+   "SR": [{
+    "name":"Hiyori","star":6,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }],"power":"1653K","level":130,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":20,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}],
+   "R": [{
+    "name":"Kanade","star":6,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }],"power":"488K","level":50,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":20,"star":6
+    },"intimacy":3,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Assassin": {
+   "SSRr": [{
+    "name":"Velvet","star":8,"skills":[{
+     "lv":3,"icon":"💥🛡️🔻","info":"<b>Defense Debuff akan mengurangi Defense musuh sebesar 9% / 12% / 15% selama 3 turn.</b>Memberikan 90/125/160% damage ke semua musuh Front Row (baris depan) dengan peluang 20/30/40% untuk memberikan efek Defense Down (pengurangan pertahanan)."
+    }, {
+     "lv":3,"icon":"💥💫💔","info":"<b>Stun selama 1 giliran (Debuff tidak dapat di heal)</b>Peluang 69% memberikan 120/140/160% damage ke musuh dengan Defense terendah, plus 20/30/40% peluang Stun"
+    }, {
+     "lv":2,"icon":"🧑‍🧑‍🧒‍🧒🗡️⬆️","info":"<b>Meningkatkan Attack Power seluruh rekan satu tim sebesar 3 / 4 / 5%.</b>Peningkatan serangan rekan tim."
+    }, {
+     "lv":3,"icon":"💥👾","info":"<b>Target akan menyerang sekutunya sendiri alih-alih menyerang tim Anda sebanyak 1 kali.</b>Memberikan 150/175/200% damage kepada musuh di depan dan memberikan efek Charm (Cooldown: 4 giliran)."
+    }],"power":"2417K","level":145,"shards": {
+     "cur":4,"max":150
+    },"card": {
+     "lv":41,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Lian","star":1,"skills":[{
+      "lv":3,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }],"power":"1411K","level":130,"shards": {
+      "cur":0,"max":20
+     },"card": {
+      "lv":20,"star":1
+     },"intimacy":6,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}],
+   "R": [{
+    "name":"Lisa","star":6,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }],"power":"480K","level":50,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":20,"star":6
+    },"intimacy":6,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Defender": {
+   "SSRr": [{
+    "name":"Haruna","star":3,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }],"power":"1034K","level":80,"shards": {
+     "cur":38,"max":70
+    },"card": {
+     "lv":20,"star":4
+    },"intimacy":6,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}],
+   "SSR": [{
+    "name":"Nanami","star":9,"skills":[
+  {
+    "lv": 3,
+    "icon": "💥👁️🔻",
+    "info": "<b>Accuracy Debuff - Selama 3 turn: Accuracy Down sebesar 4/5/6%.</b>Fan Attack. Memberikan 202/209/217% damage ke target utama dan 112/119/127% ke target tambahan. Memiliki 30/35/40% peluang untuk memberikan efek Accuracy Down selama 3 turn."
+  },
+  {
+    "lv": 3,
+    "icon": "💨⚡",
+    "info": "Saat menghindar (evade): Memulihkan 6/8/10 Skill Gauge."
+  },
+  {
+    "lv": 3,
+    "icon": "💨⬆️",
+    "info": "<b>Evasion Buff (Personal Passive) - Evasion UP sebesar 7/11/15%.</b>Pasif — Meningkatkan Evasion (penghindaran) miliknya."
+  },
+  {
+    "lv": 3,
+    "icon": "💥👁️🔻",
+    "info": "<b>Accuracy Debuff - Selama 3 turn: Accuracy Down sebesar 4/5/6%.</b>Fan Attack. Pada turn pertama, memberikan 227/234/242% damage ke target utama dan 137/144/152% ke target tambahan. Memiliki 35/40/45% peluang untuk memberikan efek Accuracy Down selama 3 turn."
+  }
+],"power":"2044K","level":130,"shards": {
+     "cur":6,"max":160
+    },"card": {
+     "lv":41,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Support": {
+   "SSRr": [{
+    "name":"Ayame","star":7,"skills":[
+  {
+    "lv": 3,
+    "icon": "💥💔",
+    "info": "<b>Unhealable - Tidak dapat menerima heal selama 3 turn.</b>Memberikan 160/167/175% damage ke semua musuh baris depan (Front Row). Memiliki peluang 30/45/60% untuk memberikan efek Unhealable selama 3 turn."
+  },
+  {
+    "lv": 3,
+    "icon": "✨❌",
+    "info": "<b>Remove Buff - Menghapus 1 Stat UP Buff.</b>Basic Attack: Memberikan 100/105/110% damage. Memiliki peluang 20/25/30% untuk menghapus satu buff Stat Up dari target."
+  },
+  {
+    "lv": 3,
+    "icon": "⏳🔻",
+    "info": "<b>Speed Debuff (Debuff Passive) - Speed Down sebesar 1/2/3%.</b>Pasif — Mengurangi Speed seluruh musuh."
+  },
+  {
+    "lv": 2,
+    "icon": "⚡⬆️",
+    "info": "Pada turn 4, mengisi Skill Gauge seluruh rekan tim sebesar 30/40/50 (Pada HiddenPiece Lv.41 skill akan Level Up)."
+  }
+],"power":"2043K","level":140,"shards": {
+     "cur":50,"max":100
+    },"card": {
+     "lv":20,"star":2
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Aria","star":4,"skills":[{
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }],"power":"1346K","level":100,"shards": {
+      "cur":69,"max":90
+     },"card": {
+      "lv":20,"star":3
+     },"intimacy":6,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }},
+    {
+     "name":"Chihiro","star":4,"skills":[{
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }],"power":"869K","level":75,"shards": {
+      "cur":15,"max":90
+     },"card": {
+      "lv":20,"star":3
+     },"intimacy":6,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }},
+    {
+     "name":"Emiko (Summer)","star":2,"skills":[{
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":0,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":25,"max":50
+     },"card": {
+      "lv":1,"star":1
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}],
+   "R": [{
+    "name":"Emiko","star":6,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }],"power":"518K","level":55,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":1,"star":6
+    },"intimacy":6,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Healer": {
+   "SSRr": [{
+    "name":"Sae (Summer)","star":1,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }],"power":"0","level":1,"shards": {
+     "cur":12,"max":20
+    },"card": {
+     "lv":10,"star":1
+    },"intimacy":1,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Aimi","star":1,"skills":[{
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":12,"max":20
+     },"card": {
+      "lv":10,"star":1
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}],
+   "SSR": [{
+    "name":"Yui","star":9,"skills":[
+  {
+    "lv": 3,
+    "icon": "💚🛡️",
+    "info": "<b>Shield - Selama 3 turn: Memberikan Shield setara dengan 80/90/100% dari Attack Power.</b>Memulihkan HP 2 rekan tim dengan HP terendah sebesar 200/215/230% dari Attack caster. Juga memberikan Shield yang proporsional dengan Attack caster kepada mereka selama 3 turn."
+  },
+  {
+    "lv": 3,
+    "icon": "🛡️🗡️⬆️",
+    "info": "<b>Stat Buff - Selama 3 turn: Attack UP sebesar 6/8/10% / Defense UP sebesar 6/8/10%.</b>Setelah menggunakan Aether Flick, memberikan Attack Up dan Defense Up kepada seluruh rekan tim di barisan belakang (Back Row)."
+  },
+  {
+    "lv": 3,
+    "icon": "💨⬆️",
+    "info": "<b>Evasion Buff (All-Ally Passive) - Evasion UP sebesar 2/3/4%.</b>Pasif — Meningkatkan Evasion (penghindaran) seluruh rekan tim."
+  },
+  {
+    "lv": 3,
+    "icon": "✨💚",
+    "info": "Menghidupkan kembali (Revive) 2 rekan tim yang gugur dengan HP setara dengan 220/230/240% dari Attack caster (Cooldown: 5 turn)."
+  }
+],"power":"1841K","level":130,"shards": {
+     "cur":51,"max":160
+    },"card": {
+     "lv":41,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}],
+   "SR": [{
+    "name":"Kiyomi","star":6,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }],"power":"504K","level":50,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":1,"star":6
+    },"intimacy":6,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  }
+ },
+ "Water": {
+  "Fighter": {
+   "SSRr": [{
+    "name":"Rika","star":8,"skills":[{
+     "lv":3,"icon":"💥❄️","info":"<b>Membuat target tidak bisa bertindak selama 1 turn.</b>Menghasilkan 90/125/160% damage ke musuh di depan dengan peluang 20/30/40% untuk memberikan efek Freeze."
+    }, {
+     "lv":3,"icon":"💥❄️","info":"<b>Membuat target tidak dapat bertindak (unable to act) selama 1 turn.</b>Setelah menggunakan skill utama, memberikan 90/125/160% damage ke musuh di barisan belakang dengan peluang 20/30/40% untuk memberikan efek Freeze."
+    }, {
+     "lv":2,"icon":"💚⬆️","info":"<b>Memberikan efek HP Buff-HP UP sebesar 3/5/7%.</b>Meningkatkan HP karakter lebih lanjut (bisa di-Level Up setelah mencapai Level Hero 70)."
+    }, {
+     "lv":3,"icon":"💥❄️","info":"Memberikan 90/110/130% damage ke semua musuh serta mengabaikan pertahanan terhadap target yang terkena status Frozen (Cooldown: 4 giliran)."
+    }],"power":"2700K","level":145,"shards": {
+     "cur":5,"max":150
+    },"card": {
+     "lv":100,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Reina","star":4,"skills":[
+  {
+    "lv": 3,
+    "icon": "💥❄️",
+    "info": "<b>Freeze - Tidak dapat bertindak (Cannot Act) selama 1 turn.</b>Penetration Attack — Memberikan 200/210/220% damage ke target utama dan 150/160/170% ke target tambahan. Memiliki peluang 30/40/50% untuk menimbulkan efek Freeze."
+  },
+  {
+    "lv": 2,
+    "icon": "💥❄️🔥",
+    "info": "Memberikan 220/260/300% damage kepada 1 musuh yang terkena efek Freeze dan mengabaikan Defense mereka. (Cooldown: 6 turn)."
+  },
+  {
+    "lv": 2,
+    "icon": "❄️",
+    "info": "<b>Freeze - Tidak dapat bertindak (Cannot Act) selama 1 turn.</b>Basic Attack: Memberikan 100/120/140% damage. Memiliki peluang 20/25/30% untuk menimbulkan efek Freeze."
+  },
+  {
+    "lv": 2,
+    "icon": "💥❄️",
+    "info": "<b>Freeze - Tidak dapat bertindak (Cannot Act) selama 2 turn.</b>Memberikan 150/175/200% damage ke 3 musuh secara acak. Memiliki peluang 20/30/40% untuk menimbulkan efek Freeze (Cooldown: 3 turn)."
+  }
+],"power":"1907K","level":145,"shards": {
+      "cur":1,"max":90
+     },"card": {
+      "lv":40,"star":2
+     },"intimacy":6,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }},
+    {
+     "name":"Shion","star":1,"skills":[{
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":3,"icon":"","info":""
+     }],"power":"1506K","level":130,"shards": {
+      "cur":0,"max":20
+     },"card": {
+      "lv":41,"star":5
+     },"intimacy":6,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }},
+    {
+     "name":"Naomi (Chosen)","star":1,"skills":[{
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":0,"icon":"","info":""
+     }, {
+      "lv":0,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":0,"max":20
+     },"card": {
+      "lv":0,"star":0
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}],
+   "SSR": [{
+    "name":"Maiko","star":9,"skills":[{
+     "lv":3,"icon":"💥❄️","info":"<b>Membuat target tidak dapat bertindak (Cannot Act) selama 1 giliran (1 turn).</b>Memberikan damage 225/240/255% ke musuh di barisan depan (Front Row), serta memiliki peluang 30/35/40% untuk menyebabkan efek Freeze."
+    }, {
+     "lv":3,"icon":"💥❄️","info":"<b>Membuat target tidak bisa bertindak (Cannot Act) selama 2 turn.</b>Memberikan damage 145/152/160% ke 3 musuh acak, serta memiliki peluang 40/45/50% untuk memberikan efek Freeze (beku). Aktif hanya sekali per pertempuran."
+    }, {
+     "lv":3,"icon":"💥","info":"Memberikan Basic Attack 100% damage, ditambah 50/65/80% damage tambahan kepada musuh yang terkena efek Freeze (Beku)."
+    }, {
+     "lv":3,"icon":"💥❄️","info":"<b>Membuat musuh tidak bisa bertindak (Cannot Act) selama 2 turn.</b>Serangan Radial (Radial Attack). Memberikan 150/155/160% damage ke target utama dan 80/90/100% ke target tambahan. Memiliki peluang 30/40/50% untuk menimbulkan efek Freeze (Cooldown: 3 turn)."
+    }],"power":"2311K","level":145,"shards": {
+     "cur":84,"max":160
+    },"card": {
+     "lv":41,"star":6
+    },"intimacy":6,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Assassin": {
+   "SSRr": [{
+    "name":"Parin","star":1,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }],"power":"1135K","level":90,"shards": {
+     "cur":0,"max":20
+    },"card": {
+     "lv":20,"star":2
+    },"intimacy":6,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}],
+   "SSR": [{
+    "name":"Naomi","star":10,"skills":[{
+     "lv":3,"icon":"💥💪","info":"Memberikan 198/211/225% damage kepada musuh dengan ATK tertinggi."
+    }, {
+     "lv":3,"icon":"💥💪","info":"Menghasilkan 210/225/240% damage ke musuh dengan ATK tertinggi (Cooldown: 4 turn)."
+    }, {
+     "lv":3,"icon":"🗡️⬆️","info":"<b>Pasif peningkatan 3/5/7%</b>Meningkatkan Attack karakter"
+    }, {
+     "lv":3,"icon":"💥","info":"Memberikan damage 70/85/100% ke semua musuh (Cooldown: 2 turn)."
+    }],"power":"2344K","level":145,"shards": {
+     "cur":0,"max":170
+    },"card": {
+     "lv":100,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Defender": {
+   "SR": [{
+    "name":"Marina","star":6,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }],"power":"524K","level":50,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":1,"star":6
+    },"intimacy":5,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}],
+   "R": [{
+    "name":"Ayumi","star":6,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }],"power":"467K","level":50,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":10,"star":6
+    },"intimacy":5,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Support": {
+   "SSRr": [{
+    "name":"Kaori","star":7,"skills":[{
+     "lv":3,"icon":"💥🗡️🔻","info":"<b>Attack Down sebesar 9% / 12% / 15% selama 3 turn.</b>Memberikan 126/139/152% damage ke 3 musuh secara acak, dengan peluang 30/40/50% untuk memberikan Attack Debuff selama 2 turn."
+    }, {
+     "lv":3,"icon":"🧑‍🧑‍🧒‍🧒🗡️⬆️","info":"<b>Attack Buff selama 3 giliran: 9% / 12% / 15%.</b>Saat menggunakan Mini Spirit Blast, memberikan Attack Up (peningkatan Serangan) kepada seluruh rekan tim selama 2 giliran."
+    }, {
+     "lv":3,"icon":"💚⬆️","info":"<b>Passive Buff HP 3% / 1.5% / 7%</b>Meningkatkan HP karakter."
+    }, {
+     "lv":3,"icon":"💥🗡️🔻","info":"<b>Attack Debuff - Selama 3 turn, menurunkan Attack musuh sebesar 9% / 12% / 15%</b>Menimbulkan 140/170/200% damage ke 3 musuh secara acak dan memberikan efek Attack Debuff selama 2 turn (Cooldown: 2 turn)."
+    }],"power":"2212K","level":145,"shards": {
+     "cur":3,"max":100
+    },"card": {
+     "lv":50,"star":6
+    },"intimacy":6,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}],
+   "SSR": [{
+    "name":"Misato","star":8,"skills":[
+  {
+    "lv": 2,
+    "icon": "💥❄️",
+    "info": "<b>Freeze - Tidak dapat bertindak (Cannot Act) selama 1 turn.</b>Radial Attack. Memberikan 153/158/164% damage ke target utama dan 87/92/98% ke target tambahan. Memiliki peluang 20/30/40% untuk menimbulkan efek Freeze."
+  },
+  {
+    "lv": 1,
+    "icon": "💥📉",
+    "info": "Penetration Attack. Memberikan 203/214/225% damage ke target utama dan 148/159/170% ke target tambahan. Mengurangi Skill Gauge mereka sebesar 25. (Cooldown: 5 turn)."
+  },
+  {
+    "lv": 1,
+    "icon": "🛡️🔻",
+    "info": "<b>Defense Debuff (Debuff Passive) - Defense Down sebesar 3/4/5%.</b>Pasif — Mengurangi Defense seluruh musuh."
+  },
+  {
+    "lv": 2,
+    "icon": "💥📉",
+    "info": "Penetration Attack. Memberikan 220/230/240% damage ke target utama dan 170/185/200% ke target tambahan. Mengurangi Skill Gauge mereka sebesar 25/30/35. (Cooldown: 3 turn)."
+  }
+],"power":"1911K","level":145,"shards": {
+     "cur":0,"max":150
+    },"card": {
+     "lv":20,"star":6
+    },"intimacy":6,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}],
+   "R": [{
+    "name":"Chika","star":6,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }],"power":"460K","level":50,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":20,"star":6
+    },"intimacy":5,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Healer": {
+   "SSRr": [{
+    "name":"Hina","star":3,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }],"power":"1469K","level":130,"shards": {
+     "cur":0,"max":70
+    },"card": {
+     "lv":41,"star":6
+    },"intimacy":6,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Shua","star":2,"skills":[{
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }],"power":"682K","level":70,"shards": {
+      "cur":30,"max":50
+     },"card": {
+      "lv":20,"star":1
+     },"intimacy":6,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }},
+    {
+     "name":"Hiyori (Summer)","star":1,"skills":[{
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":0,"icon":"","info":""
+     }, {
+      "lv":0,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":0,"max":20
+     },"card": {
+      "lv":0,"star":0
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}],
+   "SR": [{
+    "name":"Yukino","star":6,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }],"power":"509K","level":50,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":21,"star":6
+    },"intimacy":5,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}],
+   "R": [{
+    "name":"Sae","star":6,"skills":[{
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }],"power":"509K","level":55,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":7,"star":6
+    },"intimacy":5,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}],
+   "SRR": [{
+    "name":"Misaki","star":8,"skills":[
+  {
+    "lv": 2,
+    "icon": "💚🍉",
+    "info": "Memulihkan HP rekan tim dengan HP terendah sebesar 295/315/335% dari Attack caster."
+  },
+  {
+    "lv": 2,
+    "icon": "🛡️⬆️",
+    "info": "<b>Defense Buff - Selama 3 turn: Defense UP sebesar 9/12/15%.</b>Setelah menggunakan Watermelon Cheer, memberikan Defense Up kepada seluruh rekan tim selama 2 turn."
+  },
+  {
+    "lv": 2,
+    "icon": "🛡️⬆️",
+    "info": "<b>Additional Defense Power (Personal Passive) - Defense UP sebesar 3/5/7%.</b>Pasif — Meningkatkan Defense-nya."
+  },
+  {
+    "lv": 3,
+    "icon": "💚✨",
+    "info": "Memulihkan HP seluruh rekan tim sebesar 80/90/100% dari Attack caster (Cooldown: 4 turn)."
+  }
+],"power":"1890K","level":145,"shards": {
+     "cur":84,"max":150
+    },"card": {
+     "lv":41,"star":6
+    },"intimacy":6,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  }
+ },
+ "Light": {
+  "Fighter": {
+   "SSRr": [{
+    "name":"Lezbianca","star":1,"skills":[{
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }],"power":"1433K","level":130,"shards": {
+     "cur":0,"max":20
+    },"card": {
+     "lv":20,"star":1
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Asuka","star":1,"skills":[{
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":12,"max":20
+     },"card": {
+      "lv":10,"star":1
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}]
+  },
+  "Assassin": {
+   "SSRr": [{
+    "name":"Lexi","star":2,"skills":[{
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }],"power":"1473K","level":130,"shards": {
+     "cur":30,"max":50
+    },"card": {
+     "lv":20,"star":1
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}],
+   "SR": [{
+    "name":"Akane","star":6,"skills":[{
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }],"power":"1624K","level":130,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":41,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}],
+   "SRR": [{
+    "name":"Aoi","star":7,"skills":[
+  {
+    "lv": 3,
+    "icon": "💥🎤",
+    "info": "<b>Attack Debuff - Selama 3 turn: Attack Down sebesar 9/12/15%.</b>Fan Attack. Memberikan 131/135/140% damage ke target utama dan 77/81/86% ke target tambahan. Memiliki peluang 30/35/40% untuk memberikan Attack Debuff."
+  },
+  {
+    "lv": 3,
+    "icon": "💥🎶",
+    "info": "Setelah menggunakan Deafening Pitchbreaker, memiliki peluang 50% untuk memberikan tambahan 208/221/235% damage."
+  },
+  {
+    "lv": 3,
+    "icon": "🎵",
+    "info": "Basic Attack: Memberikan 110/115/120% damage ke satu target di depan. Dijamin memberikan Critical Hit jika target terkena Attack Debuff."
+  },
+  {
+    "lv": 3,
+    "icon": "💚🎶",
+    "info": "Memulihkan HP seluruh rekan tim sebesar 75/85/95% dari Attack caster (Cooldown: 4 turn)."
+  }
+],"power":"2082K","level":140,"shards": {
+     "cur":36,"max":100
+    },"card": {
+     "lv":100,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Defender": {
+   "SSRr": [{
+    "name":"Hinata (Summer)","star":2,"skills":[{
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }],"power":"1561K","level":130,"shards": {
+     "cur":10,"max":50
+    },"card": {
+     "lv":20,"star":2
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Dana","star":1,"skills":[{
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":0,"max":20
+     },"card": {
+      "lv":2,"star":2
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }},
+    {
+     "name":"Yuzuki","star":1,"skills":[{
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":0,"max":20
+     },"card": {
+      "lv":2,"star":2
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}]
+  },
+  "Support": {
+   "SSRr": [{
+    "name":"Akane (Summer)","star":2,"skills":[{
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }, {
+     "lv":0,"icon":"","info":""
+    }, {
+     "lv":1,"icon":"","info":""
+    }],"power":"0","level":1,"shards": {
+     "cur":25,"max":50
+    },"card": {
+     "lv":1,"star":1
+    },"intimacy":1,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Healer": {
+   "SSRr": [{
+    "name":"Sayo","star":1,"skills":[{
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }],"power":"1325K","level":130,"shards": {
+     "cur":0,"max":20
+    },"card": {
+     "lv":20,"star":1
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  }
+ },
+ "Dark": {
+  "Fighter": {
+   "SSRr": [{
+    "name":"Kuro (Curvy)","star":8,"skills":[{
+     "lv":3,"icon":"💥💫","info":"<b>Menyebabkan musuh tidak dapat bertindak (Unable to act) selama 1 giliran dan debuff tersebut tidak dapat dibersihkan (cannot be cleansed).</b>Menghasilkan 90%/125%/160% damage kepada musuh di depan dan memiliki peluang 15%/22%/30% untuk memberikan efek stun."
+    }, {
+     "lv":3,"icon":"💥♨️","info":"<b>Menurunkan Attack Power musuh sebesar 10% / 15% / 20% selama 3 turn (giliran).<b/>Setelah menggunakan skill utama, memiliki peluang 69% untuk memberikan 90/125/160% damage ke musuh di barisan belakang serta peluang 50/60/70% untuk memberikan efek Bleed."
+    }, {
+     "lv":3,"icon":"💥❄️","info":"<b>Membuat target tidak dapat bertindak selama 1 giliran (Unable to act for 1 turns).</b>Pada basic attack (serangan dasar), memiliki peluang 51% untuk memberikan 100/105/110% damage dan peluang 30/51/60% untuk memberikan efek Freeze (Membeku)."
+    }, {
+     "lv":3,"icon":"💥🔥","info":"<b>Meningkatkan Steamy-Attack Power sebesar 10/15/20% selama 3 turn (berdasarkan level skill).</b>Menyerang semua musuh — memberikan 50/70/90% damage dan memiliki peluang 30/40/50% untuk memberikan efek Burn selama 4 turn."
+    }],"power":"2780K","level":145,"shards": {
+     "cur":6,"max":150
+    },"card": {
+     "lv":100,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Sayuri","star":1,"skills":[{
+      "lv":3,"icon":"","info":""
+     }, {
+      "lv":3,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }],"power":"1496K","level":130,"shards": {
+      "cur":0,"max":20
+     },"card": {
+      "lv":20,"star":1
+     },"intimacy":7,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }},
+    {
+     "name":"Shiro","star":1,"skills":[{
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }],"power":"1434K","level":130,"shards": {
+      "cur":0,"max":20
+     },"card": {
+      "lv":20,"star":1
+     },"intimacy":7,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}],
+   "SSR": [{
+    "name":"Kuro","star":4,"skills":[
+  {
+    "lv": 3,
+    "icon": "💥🔥",
+    "info": "<b>Bleed - Memberikan 10/15/20% Attack Damage selama 3 turn.</b>Memberikan 130/135/140% damage ke semua musuh di barisan depan (Front Row). Memiliki peluang 30/35/40% untuk memberikan efek Bleed, yang menghasilkan True damage setara dengan persentase Attack caster."
+  },
+  {
+    "lv": 3,
+    "icon": "💥🩸",
+    "info": "<b>Bleed - Memberikan 10/15/20% Attack Damage selama 3 turn.</b>Memberikan 130/135/140% damage ke semua musuh di barisan belakang (Back Row). Memiliki peluang 30/35/40% untuk memberikan efek Bleed, yang menghasilkan True damage setara dengan persentase Attack caster (Cooldown: 3 turn)."
+  },
+  {
+    "lv": 3,
+    "icon": "💥✨",
+    "info": "Setelah menggunakan Basic Attack, memiliki peluang 69% untuk memberikan tambahan 169/219/269% damage ke musuh acak."
+  },
+  {
+    "lv": 3,
+    "icon": "💥🎉",
+    "info": "Memberikan 90/105/120% damage ke semua musuh (Cooldown: 3 turn)."
+  }
+],"power":"1679K","level":130,"shards": {
+     "cur":86,"max":90
+    },"card": {
+     "lv":41,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Assassin": {
+   "SSRr": [{
+    "name":"Teresa","star":8,"skills":[{
+     "lv":3,"icon":"💥💫","info":"<b>Membuat target tidak dapat bertindak selama 1 giliran (Debuff ini tidak bisa dihapus/dibersihkan).</b>Menyerang 2 musuh acak, memberikan 160/180/200% damage, dan memiliki 15/22/30% peluang untuk memberikan efek Stun."
+    }, {
+     "lv":3,"icon":"🪃🔥","info":"<b>Menghasilkan 10 / 15 / 20% Attack Damage selama 3 giliran.</b>Saat serangan dihindari, melakukan counterattack sebesar 200/250/300% damage dan memiliki 40/55/70% peluang untuk memberikan efek Flame."
+    }, {
+     "lv":3,"icon":"🤸‍♂️","info":"<b>Evasion Up / Personal Passive. 4/5/6% Evasion Rate</b>Memberikan tambahan Evasion (penghindaran) ke diri sendiri."
+    }, {
+     "lv":3,"icon":"💥❤️‍🔥","info":"Menyerang 1 musuh dengan HP rendah — Memberikan 240/260/280% damage dan 100/150/200% tambahan damage jika target terkena efek Flame (< 4 turn)."
+    }],"power":"2362K","level":145,"shards": {
+     "cur":125,"max":150
+    },"card": {
+     "lv":41,"star":3
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Kirie (Summer)","star":1,"skills":[{
+      "lv":3,"icon":"","info":""
+     }, {
+      "lv":3,"icon":"","info":""
+     }, {
+      "lv":3,"icon":"","info":""
+     }, {
+      "lv":2,"icon":"","info":""
+     }],"power":"1419K","level":130,"shards": {
+      "cur":0,"max":20
+     },"card": {
+      "lv":20,"star":1
+     },"intimacy":7,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }},
+    {
+     "name":"Jass","star":1,"skills":[{
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":12,"max":20
+     },"card": {
+      "lv":10,"star":1
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }},
+    {
+     "name":"Sayaka","star":1,"skills":[{
+      "lv":2,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":12,"max":20
+     },"card": {
+      "lv":10,"star":1
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}],
+   "SR": [{
+    "name":"Kirie","star":6,"skills":[{
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }],"power":"1635K","level":130,"shards": {
+     "cur":0,"max":0
+    },"card": {
+     "lv":41,"star":6
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }}]
+  },
+  "Support": {
+   "SSRr": [{
+    "name":"Karasuya","star":2,"skills":[{
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":3,"icon":"","info":""
+    }, {
+     "lv":2,"icon":"","info":""
+    }],"power":"1408K","level":130,"shards": {
+     "cur":32,"max":50
+    },"card": {
+     "lv":20,"star":1
+    },"intimacy":7,"wear": {
+     "bracelet":null,"bikini":null,"hat":null,"sandals":null
+    },"skillProgress": {
+     "tracked":false,"skill":"skillTwo","current":0,"max":1000
+    }},
+    {
+     "name":"Garin","star":2,"skills":[{
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":0,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":25,"max":50
+     },"card": {
+      "lv":1,"star":1
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }},
+    {
+     "name":"Umbae","star":2,"skills":[{
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }, {
+      "lv":0,"icon":"","info":""
+     }, {
+      "lv":1,"icon":"","info":""
+     }],"power":"0","level":1,"shards": {
+      "cur":25,"max":50
+     },"card": {
+      "lv":1,"star":1
+     },"intimacy":1,"wear": {
+      "bracelet":null,"bikini":null,"hat":null,"sandals":null
+     },"skillProgress": {
+      "tracked":false,"skill":"skillTwo","current":0,"max":1000
+     }}]
+  }
+ }
+}

@@ -1430,18 +1430,12 @@ opacity: 0.7;
     flex-wrap: wrap;
   }
 
-  .char-tag img {
-    width: min-content;
-    height: 14px;
-  }
-
-
   .char-tag {
     font-size: 0.75rem;
     font-weight: 700;
     padding: 3px 10px;
     border-radius: 999px;
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.4);
     color: #fff;
   }
 
@@ -1662,4 +1656,36 @@ opacity: 0.7;
     flex: none;
     text-align: center;
     font-size: 1.1rem;
+  }
+
+  /* Input skill via JSON (mode edit) */
+  .edit-skill-json {
+    margin: 6px 15px;
+  }
+
+  .edit-skill-json textarea {
+    resize: vertical;
+    font-family: monospace;
+    font-size: 0.75rem;
+  }
+
+  .edit-skill-json-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .btn-apply-json {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #007bff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .skill-json-status {
+    font-size: 0.75rem;
   }
