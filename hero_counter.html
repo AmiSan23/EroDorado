@@ -29,6 +29,7 @@
                 <option value="hero">Kelompokkan: per hero counter</option>
                 <option value="target">Kelompokkan: per target (di-counter oleh)</option>
             </select>
+            <label class="hc-check"><input type="checkbox" id="hc-showskills" checked> Tampilkan skill</label>
             <span class="spacer"></span>
             <button class="hc-btn" id="hc-import">Import JSON</button>
             <button class="hc-btn" id="hc-export">Export JSON</button>
@@ -137,58 +138,54 @@
     };
 
     // ---------- PROFIL ----------
+    // [img][name] / [img][rank, role] / [icon skill (bisa disembunyikan)] / [info skill]
     function splitInfo(info) {
         const m = String(info || '').match(/^\s*<b>([\s\S]*?)<\/?b\/?>([\s\S]*)$/i);
         if (m) return { sum: m[1].replace(/<[^>]*>/g, '').trim(), desc: m[2].trim() };
-        const plain = String(info || '').replace(/<[^>]*>/g, '').trim();
-        return { sum: plain.length > 60 ? plain.slice(0, 60) + '…' : plain, desc: info || '' };
+        return { sum: '', desc: String(info || '').trim() };
     }
 
-    function profileHTML(name) {
+    function profileHTML(name, opts = {}) {
         const c = charByName.get(name);
+        const x = opts.del ? '<button class="hc-x" data-act="del-pair" title="Hapus counter ini">✕</button>' : '';
         if (!c) {
-            return `<div class="hc-profile hc-missing"><span class="hc-name">${esc(name)}</span>Tidak ditemukan di database karakter</div>`;
+            return `<div class="hc-profile hc-missing">${x}<span class="hc-name">${esc(name)}</span>Tidak ditemukan di database karakter</div>`;
         }
         const lvKeys = ['skillOneLevel', 'skillTwoLevel', 'skillThreeLevel', 'skillFourLevel'];
-        const skills = lvKeys.map((k, i) => {
+        const icons = lvKeys.map((k, i) =>
+            `<button type="button" class="hc-sk-ico${i === 0 ? ' on' : ''}" data-act="sk" data-i="${i}" title="Skill ${i + 1}">
+                <span class="hc-sk-e">${esc(c.skillIcon?.[i] || '•')}</span><span class="hc-sk-l">S${i + 1} · Lv${esc(c[k])}</span>
+            </button>`).join('');
+        const infos = lvKeys.map((k, i) => {
             const { sum, desc } = splitInfo(c.skillInfo?.[i]);
-            const icon = c.skillIcon?.[i] || '•';
-            return `<details class="hc-skill">
-                <summary><span class="hc-s-icon">${esc(icon)}</span><span class="hc-s-lv">S${i + 1} · Lv ${esc(c[k])}</span><span class="hc-s-sum">${esc(sum)}</span></summary>
-                <div class="hc-s-desc">${desc ? safeInfo(desc) : '<span class="hc-s-empty">Belum ada info</span>'}</div>
-            </details>`;
+            const body = (sum || desc)
+                ? (sum ? `<b>${esc(sum)}</b>` : '') + (desc ? safeInfo(desc) : '')
+                : '<span class="hc-sk-empty">Belum ada info</span>';
+            return `<div class="hc-sk-info${i === 0 ? ' on' : ''}" data-i="${i}">${body}</div>`;
         }).join('');
         return `<div class="hc-profile element-${esc(c.element)}">
+            ${x}
             <div class="hc-head">
                 <img class="hc-img" src="img/${esc(c.name)}.png" alt="${esc(c.name)}" onerror="this.onerror=null;this.src='img/default.png'">
-                <div>
-                    <div class="hc-name">${esc(c.name)}</div>
-                    <div class="hc-tags">
-                        <span class="char-rank rank-${esc(c.rank)}">${esc(c.rank)}</span>
-                        <span class="char-tag">${esc(c.element)}</span>
-                        <span class="char-tag">${esc(c.role)}</span>
-                    </div>
+                <div class="hc-name">${esc(c.name)}</div>
+                <div class="hc-tags">
+                    <span class="char-rank rank-${esc(c.rank)}">${esc(c.rank)}</span>
+                    <span class="char-tag">${esc(c.element)}</span>
+                    <span class="char-tag">${esc(c.role)}</span>
                 </div>
             </div>
-            <div class="hc-skills">${skills}</div>
+            <div class="hc-skillbox">
+                <div class="hc-sk-bar">
+                    <button type="button" class="hc-sk-toggle" data-act="sk-toggle" title="Tampilkan / sembunyikan skill">▾</button>
+                    <div class="hc-sk-icons">${icons}</div>
+                </div>
+                <div class="hc-sk-infos">${infos}</div>
+            </div>
         </div>`;
     }
 
-    function pairHTML(hero, target) {
-        return `<article class="hc-pair" data-hero="${esc(hero)}" data-target="${esc(target)}">
-            <div class="hc-pair-top">
-                <button class="hc-btn small" data-act="toggle">Buka semua skill</button>
-                <button class="hc-btn small danger" data-act="del-pair" title="Hapus pasangan ini">✕</button>
-            </div>
-            <div class="hc-vs">
-                <div><div class="hc-side-label">COUNTER</div>${profileHTML(hero)}</div>
-                <div class="hc-vs-badge">VS</div>
-                <div><div class="hc-side-label target">TARGET</div>${profileHTML(target)}</div>
-            </div>
-        </article>`;
-    }
-
     // ---------- RENDER ----------
+    // Satu grup = [hero] > [kolom hero counter]. Kolom counter ditumpuk (flex column); grup mengalir ke samping.
     function render() {
         const mode = $('hc-group').value;
         const q = $('hc-search').value.trim().toLowerCase();
@@ -202,6 +199,7 @@
             }
         }
         const groups = [...map.entries()].sort((a, b) => cmpHero(a[0], b[0]));
+        const arrow = mode === 'hero' ? '▶' : '◀';
         let html = '';
         for (const [key, others] of groups) {
             const keyHit = key.toLowerCase().includes(q);
@@ -212,8 +210,20 @@
                    <button class="hc-btn small" data-act="edit" data-key="${esc(key)}">Edit</button>
                    <button class="hc-btn small danger" data-act="del-group" data-key="${esc(key)}">Hapus semua</button>`
                 : `<span class="hc-gk">🎯 ${esc(key)}</span><span class="hc-gs">di-counter oleh ${others.length} hero</span>`;
-            const pairs = shown.map(o => mode === 'hero' ? pairHTML(key, o) : pairHTML(o, key)).join('');
-            html += `<section class="hc-group"><div class="hc-group-head">${head}</div><div class="hc-pairs">${pairs}</div></section>`;
+            const rows = shown.map(o => {
+                const hero = mode === 'hero' ? key : o;
+                const target = mode === 'hero' ? o : key;
+                return `<div class="hc-counter-row" data-hero="${esc(hero)}" data-target="${esc(target)}">
+                    <span class="hc-arrow">${arrow}</span>${profileHTML(o, { del: true })}
+                </div>`;
+            }).join('');
+            html += `<section class="hc-group">
+                <div class="hc-group-head">${head}</div>
+                <div class="hc-group-body">
+                    <div class="hc-hero-col">${profileHTML(key)}</div>
+                    <div class="hc-counter-col">${rows}</div>
+                </div>
+            </section>`;
         }
         $('hc-list').innerHTML = html || `<div class="hc-empty">${Object.keys(counters).length
             ? 'Tidak ada hasil untuk pencarian ini.'
@@ -342,14 +352,17 @@
             const btn = e.target.closest('button[data-act]');
             if (!btn) return;
             const act = btn.dataset.act;
-            if (act === 'toggle') {
-                const ds = btn.closest('.hc-pair').querySelectorAll('details');
-                const open = [...ds].some(d => !d.open);
-                ds.forEach(d => d.open = open);
-                btn.textContent = open ? 'Tutup semua skill' : 'Buka semua skill';
+            if (act === 'sk') {                       // pilih skill -> tampilkan infonya
+                const prof = btn.closest('.hc-profile');
+                prof.querySelectorAll('.hc-sk-ico').forEach(b => b.classList.toggle('on', b === btn));
+                prof.querySelectorAll('.hc-sk-info').forEach(d => d.classList.toggle('on', d.dataset.i === btn.dataset.i));
+            } else if (act === 'sk-toggle') {          // sembunyikan / tampilkan icon + info skill
+                const box = btn.closest('.hc-skillbox');
+                box.classList.toggle('collapsed');
+                btn.textContent = box.classList.contains('collapsed') ? '▸' : '▾';
             } else if (act === 'del-pair') {
-                const p = btn.closest('.hc-pair');
-                const hero = p.dataset.hero, target = p.dataset.target;
+                const row = btn.closest('.hc-counter-row');
+                const hero = row.dataset.hero, target = row.dataset.target;
                 if (!confirm(`Hapus: ${hero} meng-counter ${target}?`)) return;
                 counters[hero] = (counters[hero] || []).filter(t => t !== target);
                 if (!counters[hero].length) delete counters[hero];
@@ -363,6 +376,10 @@
                 persist();
                 render();
             }
+        });
+
+        $('hc-showskills').addEventListener('change', e => {
+            $('hc-list').classList.toggle('skills-hidden', !e.target.checked);
         });
 
         $('hc-export').addEventListener('click', exportJSON);
