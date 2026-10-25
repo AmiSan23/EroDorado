@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="sidebar">
+        <input type="checkbox" id="checkmn" checked />
+        <label for="checkmn" id="toggle-btn">☰</label>
+
+        <a href="index.html">📊 <span>Character Status</span></a>
+        <a href="create.html">➕ <span>Create New Character</span></a>
+        <a href="tier_list.html">🏆 <span>Tier List</span></a>
+        <a href="hero_counter.html" class="active">⚔️ <span>Hero Counter</span></a>
+        <a href="enemy_location.html">🗺️ <span>Enemy Location</span></a>
+        <a href="update_list.html">📝 <span>Character Update</span></a>
+        <a href="backup_recovery.html">💾 <span>Backup/Recovery</span></a>
+    </div>
+
+    <div id="main-content">
+        <h1>Hero Counter</h1>
+
+        <div class="hc-bar">
+            <input type="text" id="hc-search" placeholder="Cari hero...">
+            <select id="hc-group">
+                <option value="hero">Kelompokkan: per hero counter</option>
+                <option value="target">Kelompokkan: per target (di-counter oleh)</option>
+            </select>
+            <span class="spacer"></span>
+            <button class="hc-btn" id="hc-import">Import JSON</button>
+            <button class="hc-btn" id="hc-export">Export JSON</button>
+            <input type="file" id="hc-file" accept=".json,application/json" hidden>
+        </div>
+
+        <details class="hc-editor" id="hc-editor">
+            <summary>➕ Tambah / Edit Counter</summary>
+            <div class="hc-editor-body">
+                <div class="hc-field">
+                    <label for="hc-hero">Hero counter (hero ini meng-counter target di bawah)</label>
+                    <input type="text" id="hc-hero" list="hc-names" placeholder="mis. Rika" autocomplete="off">
+                </div>
+                <div class="hc-field">
+                    <label for="hc-target">Target yang di-counter</label>
+                    <div class="hc-row">
+                        <input type="text" id="hc-target" list="hc-names" placeholder="mis. Nova" autocomplete="off">
+                        <button class="hc-btn" id="hc-add" type="button">Tambah</button>
+                    </div>
+                    <div class="hc-chips" id="hc-chips"></div>
+                </div>
+                <div class="hc-row">
+                    <button class="hc-btn primary" id="hc-save" type="button">Simpan</button>
+                    <button class="hc-btn" id="hc-clear" type="button">Kosongkan form</button>
+                </div>
+                <div id="hc-msg"></div>
+            </div>
+        </details>
+        <datalist id="hc-names"></datalist>
+
+        <div id="hc-list"></div>
+        <div id="load-error"></div>
+    </div>
+
+<script src="character_data.js"></script>
+<script>
+    const CHAR_KEY = 'CHARACTER_DATA_V1';
+    const COUNTER_KEY = 'HERO_COUNTER_V1';
+
+    let characters = [];
+    let charByName = new Map();
+    let lowerToName = new Map();
+    let counters = {};          // { "Rika": ["Nova", "Kaori"] }  = Rika meng-counter Nova dan Kaori
+    let editTargets = [];
+
+    const $ = id => document.getElementById(id);
+    const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+    // ---------- DATA ----------
+    function loadCharacters() {
+        try {
+            const raw = localStorage.getItem(CHAR_KEY);
+            characters = raw ? migrate(normalizeImported(JSON.parse(raw))) : [];
+        } catch (e) { characters = []; }
+        charByName = new Map(characters.map(c => [c.name, c]));
+        lowerToName = new Map(characters.map(c => [c.name.toLowerCase(), c.name]));
+        $('hc-names').innerHTML = [...charByName.keys()].sort((a, b) => a.localeCompare(b))
+            .map(n => `<option value="${esc(n)}"></option>`).join('');
+        const err = $('load-error');
+        if (!characters.length) {
+            err.textContent = 'Data karakter belum ada di browser ini. Buka Character Status / Backup-Recovery dan muat data karakter dulu supaya profil bisa tampil.';
+            err.style.display = 'block';
+        } else err.style.display = 'none';
+    }
+
+    // Samakan penulisan nama dengan nama di database karakter (tidak peka huruf besar/kecil)
+    const canon = n => {
+        n = String(n ?? '').trim().replace(/\s+/g, ' ');
+        return lowerToName.get(n.toLowerCase()) || n;
+    };
+
+    function sanitize(obj) {
+        if (!obj || typeof obj !== 'object' || Array.isArray(obj))
+            throw new Error('Format harus object: { "Hero": ["Target", ...] }');
+        const out = {};
+        for (const [k, v] of Object.entries(obj)) {
+            const arr = Array.isArray(v) ? v : [v];
+            if (!arr.every(x => typeof x === 'string')) throw new Error(`Nilai untuk "${k}" harus berupa daftar nama hero.`);
+            const hero = canon(k);
+            if (!hero) continue;
+            const list = arr.map(canon).filter(n => n && n !== hero);
+            if (!list.length) continue;
+            out[hero] = [...new Set([...(out[hero] || []), ...list])];
+        }
+        return out;
+    }
+
+    function loadCounters() {
+        try {
+            const raw = localStorage.getItem(COUNTER_KEY);
+            counters = raw ? sanitize(JSON.parse(raw)) : {};
+        } catch (e) { counters = {}; }
+    }
+
+    function persist() { localStorage.setItem(COUNTER_KEY, JSON.stringify(counters)); }
+
+    // ---------- URUTAN: element > role > rank > nama ----------
+    function heroOrder(name) {
+        const c = charByName.get(name);
+        if (!c) return [99, 99, 99];
+        return [orderIdx(ELEMENT_ORDER, c.element), orderIdx(ROLE_ORDER, c.role), orderIdx(RANK_ORDER, c.rank)];
+    }
+    const cmpHero = (a, b) => {
+        const x = heroOrder(a), y = heroOrder(b);
+        return x[0] - y[0] || x[1] - y[1] || x[2] - y[2] || a.localeCompare(b);
+    };
+
+    // ---------- PROFIL ----------
+    function splitInfo(info) {
+        const m = String(info || '').match(/^\s*<b>([\s\S]*?)<\/?b\/?>([\s\S]*)$/i);
+        if (m) return { sum: m[1].replace(/<[^>]*>/g, '').trim(), desc: m[2].trim() };
+        const plain = String(info || '').replace(/<[^>]*>/g, '').trim();
+        return { sum: plain.length > 60 ? plain.slice(0, 60) + '…' : plain, desc: info || '' };
+    }
+
+    function profileHTML(name) {
+        const c = charByName.get(name);
+        if (!c) {
+            return `<div class="hc-profile hc-missing"><span class="hc-name">${esc(name)}</span>Tidak ditemukan di database karakter</div>`;
+        }
+        const lvKeys = ['skillOneLevel', 'skillTwoLevel', 'skillThreeLevel', 'skillFourLevel'];
+        const skills = lvKeys.map((k, i) => {
+            const { sum, desc } = splitInfo(c.skillInfo?.[i]);
+            const icon = c.skillIcon?.[i] || '•';
+            return `<details class="hc-skill">
+                <summary><span class="hc-s-icon">${esc(icon)}</span><span class="hc-s-lv">S${i + 1} · Lv ${esc(c[k])}</span><span class="hc-s-sum">${esc(sum)}</span></summary>
+                <div class="hc-s-desc">${desc ? safeInfo(desc) : '<span class="hc-s-empty">Belum ada info</span>'}</div>
+            </details>`;
+        }).join('');
+        return `<div class="hc-profile element-${esc(c.element)}">
+            <div class="hc-head">
+                <img class="hc-img" src="img/${esc(c.name)}.png" alt="${esc(c.name)}" onerror="this.onerror=null;this.src='img/default.png'">
+                <div>
+                    <div class="hc-name">${esc(c.name)}</div>
+                    <div class="hc-tags">
+                        <span class="char-rank rank-${esc(c.rank)}">${esc(c.rank)}</span>
+                        <span class="char-tag">${esc(c.element)}</span>
+                        <span class="char-tag">${esc(c.role)}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hc-skills">${skills}</div>
+        </div>`;
+    }
+
+    function pairHTML(hero, target) {
+        return `<article class="hc-pair" data-hero="${esc(hero)}" data-target="${esc(target)}">
+            <div class="hc-pair-top">
+                <button class="hc-btn small" data-act="toggle">Buka semua skill</button>
+                <button class="hc-btn small danger" data-act="del-pair" title="Hapus pasangan ini">✕</button>
+            </div>
+            <div class="hc-vs">
+                <div><div class="hc-side-label">COUNTER</div>${profileHTML(hero)}</div>
+                <div class="hc-vs-badge">VS</div>
+                <div><div class="hc-side-label target">TARGET</div>${profileHTML(target)}</div>
+            </div>
+        </article>`;
+    }
+
+    // ---------- RENDER ----------
+    function render() {
+        const mode = $('hc-group').value;
+        const q = $('hc-search').value.trim().toLowerCase();
+        const map = new Map();
+        for (const [hero, targets] of Object.entries(counters)) {
+            for (const t of targets) {
+                const key = mode === 'hero' ? hero : t;
+                const other = mode === 'hero' ? t : hero;
+                if (!map.has(key)) map.set(key, []);
+                map.get(key).push(other);
+            }
+        }
+        const groups = [...map.entries()].sort((a, b) => cmpHero(a[0], b[0]));
+        let html = '';
+        for (const [key, others] of groups) {
+            const keyHit = key.toLowerCase().includes(q);
+            const shown = others.filter(o => !q || keyHit || o.toLowerCase().includes(q)).sort(cmpHero);
+            if (!shown.length) continue;
+            const head = mode === 'hero'
+                ? `<span class="hc-gk">⚔️ ${esc(key)}</span><span class="hc-gs">meng-counter ${others.length} hero</span>
+                   <button class="hc-btn small" data-act="edit" data-key="${esc(key)}">Edit</button>
+                   <button class="hc-btn small danger" data-act="del-group" data-key="${esc(key)}">Hapus semua</button>`
+                : `<span class="hc-gk">🎯 ${esc(key)}</span><span class="hc-gs">di-counter oleh ${others.length} hero</span>`;
+            const pairs = shown.map(o => mode === 'hero' ? pairHTML(key, o) : pairHTML(o, key)).join('');
+            html += `<section class="hc-group"><div class="hc-group-head">${head}</div><div class="hc-pairs">${pairs}</div></section>`;
+        }
+        $('hc-list').innerHTML = html || `<div class="hc-empty">${Object.keys(counters).length
+            ? 'Tidak ada hasil untuk pencarian ini.'
+            : 'Belum ada data counter. Buka "Tambah / Edit Counter" atau Import JSON.'}</div>`;
+    }
+
+    // ---------- EDITOR ----------
+    function setMsg(text, ok) {
+        const el = $('hc-msg');
+        el.textContent = text || '';
+        el.style.color = ok ? '#5cb85c' : '#ff7043';
+    }
+
+    function renderChips() {
+        $('hc-chips').innerHTML = editTargets.length
+            ? editTargets.map((t, i) => `<span class="hc-chip">${esc(t)}<button type="button" data-i="${i}" aria-label="Hapus ${esc(t)}">×</button></span>`).join('')
+            : '<span class="hc-hint">Belum ada target.</span>';
+    }
+
+    function addTarget() {
+        const n = canon($('hc-target').value);
+        if (!n) return true;
+        if (n === canon($('hc-hero').value)) { setMsg('Hero tidak bisa meng-counter dirinya sendiri.'); return false; }
+        if (!editTargets.includes(n)) editTargets.push(n);
+        $('hc-target').value = '';
+        setMsg('');
+        renderChips();
+        return true;
+    }
+
+    function clearForm() {
+        $('hc-hero').value = '';
+        $('hc-target').value = '';
+        editTargets = [];
+        renderChips();
+        setMsg('');
+    }
+
+    function saveForm() {
+        const hero = canon($('hc-hero').value);
+        if (!hero) return setMsg('Isi nama hero counter dulu.');
+        if (!addTarget()) return;
+        if (!editTargets.length) return setMsg('Tambahkan minimal satu target.');
+        counters[hero] = [...editTargets];
+        persist();
+        render();
+        clearForm();
+        setMsg(`✅ ${hero} sekarang meng-counter ${counters[hero].length} hero.`, true);
+    }
+
+    function editHero(key) {
+        $('hc-hero').value = key;
+        editTargets = [...(counters[key] || [])];
+        renderChips();
+        setMsg('');
+        const d = $('hc-editor');
+        d.open = true;
+        d.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // ---------- IMPORT / EXPORT ----------
+    function stringifyCounters(obj) {
+        const keys = Object.keys(obj).sort(cmpHero);
+        const lines = keys.map((k, i) => `  ${JSON.stringify(k)}: ${JSON.stringify(obj[k])}${i < keys.length - 1 ? ',' : ''}`);
+        return '{\n' + lines.join('\n') + (lines.length ? '\n' : '') + '}\n';
+    }
+
+    function exportJSON() {
+        if (!Object.keys(counters).length) return alert('Belum ada data counter untuk di-export.');
+        const blob = new Blob([stringifyCounters(counters)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `hero_counter_${new Date().toISOString().slice(0, 10)}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(a.href);
+    }
+
+    function importJSON(file) {
+        const reader = new FileReader();
+        reader.onload = () => {
+            try {
+                const incoming = sanitize(JSON.parse(reader.result));
+                const n = Object.keys(incoming).length;
+                if (!n) throw new Error('File tidak berisi data counter.');
+                const overwrite = confirm(`File berisi ${n} hero counter.\n\nOK = TIMPA semua data counter saat ini\nBatal = GABUNGKAN dengan data yang sudah ada`);
+                if (overwrite) counters = incoming;
+                else for (const [k, v] of Object.entries(incoming))
+                    counters[k] = [...new Set([...(counters[k] || []), ...v])];
+                persist();
+                render();
+                setMsg(`✅ Import berhasil (${overwrite ? 'timpa' : 'gabung'}): ${n} hero counter.`, true);
+            } catch (err) {
+                alert('Import gagal: ' + err.message);
+            }
+        };
+        reader.readAsText(file);
+    }
+
+    // ---------- EVENTS ----------
+    document.addEventListener('DOMContentLoaded', () => {
+        loadCharacters();
+        loadCounters();
+        renderChips();
+        render();
+
+        $('hc-search').addEventListener('input', render);
+        $('hc-group').addEventListener('change', render);
+        $('hc-add').addEventListener('click', addTarget);
+        $('hc-target').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); addTarget(); } });
+        $('hc-save').addEventListener('click', saveForm);
+        $('hc-clear').addEventListener('click', clearForm);
+        $('hc-hero').addEventListener('change', () => {
+            const h = canon($('hc-hero').value);
+            if (counters[h]) { editTargets = [...counters[h]]; renderChips(); setMsg('Memuat counter yang sudah ada untuk ' + h + '.', true); }
+        });
+        $('hc-chips').addEventListener('click', e => {
+            const b = e.target.closest('button[data-i]');
+            if (!b) return;
+            editTargets.splice(Number(b.dataset.i), 1);
+            renderChips();
+        });
+
+        $('hc-list').addEventListener('click', e => {
+            const btn = e.target.closest('button[data-act]');
+            if (!btn) return;
+            const act = btn.dataset.act;
+            if (act === 'toggle') {
+                const ds = btn.closest('.hc-pair').querySelectorAll('details');
+                const open = [...ds].some(d => !d.open);
+                ds.forEach(d => d.open = open);
+                btn.textContent = open ? 'Tutup semua skill' : 'Buka semua skill';
+            } else if (act === 'del-pair') {
+                const p = btn.closest('.hc-pair');
+                const hero = p.dataset.hero, target = p.dataset.target;
+                if (!confirm(`Hapus: ${hero} meng-counter ${target}?`)) return;
+                counters[hero] = (counters[hero] || []).filter(t => t !== target);
+                if (!counters[hero].length) delete counters[hero];
+                persist();
+                render();
+            } else if (act === 'edit') {
+                editHero(btn.dataset.key);
+            } else if (act === 'del-group') {
+                if (!confirm(`Hapus semua counter milik ${btn.dataset.key}?`)) return;
+                delete counters[btn.dataset.key];
+                persist();
+                render();
+            }
+        });
+
+        $('hc-export').addEventListener('click', exportJSON);
+        $('hc-import').addEventListener('click', () => $('hc-file').click());
+        $('hc-file').addEventListener('change', e => {
+            if (e.target.files[0]) importJSON(e.target.files[0]);
+            e.target.value = '';
+        });
+    });
+</script>
+</body>
+</html>

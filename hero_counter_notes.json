@@ -1,0 +1,1015 @@
+{
+ "Kagura (Summer)": {
+  "Coco": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Haruna": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Marina": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ]
+ },
+ "Azusa": {
+  "Coco": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Haruna": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Marina": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ]
+ },
+ "Nanako": {
+  "Lina": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Miyuki": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Raven": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Naomi (Chosen)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Lezbianca": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Kuro (Curvy)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Sayaka": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ]
+ },
+ "Raven": {
+  "Coco": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Haruna": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Marina": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ]
+ },
+ "Savannah": {
+  "Coco": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Haruna": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Marina": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ]
+ },
+ "Kana": {
+  "Coco": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Haruna": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Marina": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ]
+ },
+ "Miko": {
+  "Lina": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Miyuki": [
+   "Remove Buff",
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Raven": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Isadora": [
+   "Remove Buff"
+  ],
+  "Haruna": [
+   "Remove Buff"
+  ],
+  "Aria": [
+   "Remove Buff"
+  ],
+  "Naomi (Chosen)": [
+   "Remove Buff",
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Lezbianca": [
+   "Remove Buff",
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Kuro (Curvy)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Sayaka": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ]
+ },
+ "Soyul": {
+  "Raven": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ],
+  "Nanami": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ],
+  "Shiro": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ],
+  "Teresa": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ]
+ },
+ "Velvet": {
+  "Coco": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Haruna": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Marina": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ]
+ },
+ "Aria": {
+  "Nova": [
+   "Remove Shield"
+  ],
+  "Tomoe": [
+   "Remove Shield"
+  ],
+  "Haruna": [
+   "Remove Shield"
+  ],
+  "Aimi": [
+   "Remove Shield"
+  ],
+  "Yui": [
+   "Remove Shield"
+  ],
+  "Chika": [
+   "Remove Shield"
+  ],
+  "Shua": [
+   "Remove Shield"
+  ],
+  "Dana": [
+   "Remove Shield"
+  ],
+  "Karasuya": [
+   "Remove Shield"
+  ],
+  "Umbae": [
+   "Remove Shield"
+  ]
+ },
+ "Ayame": {
+  "Miyuki": [
+   "Remove Buff"
+  ],
+  "Hinata": [
+   "Unhealable"
+  ],
+  "Isadora": [
+   "Remove Buff"
+  ],
+  "Miko": [
+   "Remove Buff"
+  ],
+  "Tomoe": [
+   "Unhealable"
+  ],
+  "Haruna": [
+   "Remove Buff"
+  ],
+  "Aria": [
+   "Remove Buff"
+  ],
+  "Aimi": [
+   "Unhealable"
+  ],
+  "Sae (Summer)": [
+   "Unhealable"
+  ],
+  "Yui": [
+   "Unhealable"
+  ],
+  "Kiyomi": [
+   "Unhealable"
+  ],
+  "Naomi (Chosen)": [
+   "Remove Buff"
+  ],
+  "Hina": [
+   "Unhealable"
+  ],
+  "Hiyori (Summer)": [
+   "Unhealable"
+  ],
+  "Shua": [
+   "Unhealable"
+  ],
+  "Misaki": [
+   "Unhealable"
+  ],
+  "Yukino": [
+   "Unhealable"
+  ],
+  "Sae": [
+   "Unhealable"
+  ],
+  "Lezbianca": [
+   "Remove Buff"
+  ],
+  "Sayo": [
+   "Unhealable"
+  ]
+ },
+ "Chihiro": {
+  "Miyuki": [
+   "Remove Buff"
+  ],
+  "Isadora": [
+   "Remove Buff"
+  ],
+  "Miko": [
+   "Remove Buff"
+  ],
+  "Haruna": [
+   "Remove Buff"
+  ],
+  "Aria": [
+   "Remove Buff"
+  ],
+  "Naomi (Chosen)": [
+   "Remove Buff"
+  ],
+  "Lezbianca": [
+   "Remove Buff"
+  ]
+ },
+ "Emiko (Summer)": {
+  "Savannah": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Isadora": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Nanami": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Ayame": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Akane (Summer)": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Karasuya": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ]
+ },
+ "Naomi (Chosen)": {
+  "Lina": [
+   "Remove Buff"
+  ],
+  "Miyuki": [
+   "Remove Buff"
+  ],
+  "Sigrid": [
+   "Remove Buff"
+  ],
+  "Raven": [
+   "Remove Buff"
+  ],
+  "Savannah": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Coco": [
+   "Remove Buff",
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Kazura": [
+   "Remove Buff"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Hinata": [
+   "Remove Buff"
+  ],
+  "Isadora": [
+   "Remove Buff",
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Miko": [
+   "Remove Buff"
+  ],
+  "Kagura": [
+   "Remove Buff"
+  ],
+  "Haruna": [
+   "Remove Buff",
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nanami": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Aria": [
+   "Remove Buff"
+  ],
+  "Ayame": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Chihiro": [
+   "Remove Buff"
+  ],
+  "Emiko (Summer)": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Sae (Summer)": [
+   "Remove Buff"
+  ],
+  "Yui": [
+   "Remove Buff"
+  ],
+  "Marina": [
+   "Remove Buff",
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Ayumi": [
+   "Remove Buff"
+  ],
+  "Kaori": [
+   "Remove Buff"
+  ],
+  "Misaki": [
+   "Remove Buff"
+  ],
+  "Lezbianca": [
+   "Remove Buff"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Akane (Summer)": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Kuro (Curvy)": [
+   "Remove Buff"
+  ],
+  "Sayaka": [
+   "Remove Buff"
+  ],
+  "Karasuya": [
+   "Remove Buff",
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Umbae": [
+   "Remove Buff"
+  ]
+ },
+ "Reina": {
+  "Coco": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Haruna": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Marina": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ]
+ },
+ "Rika": {
+  "Coco": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Haruna": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Marina": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ]
+ },
+ "Parin": {
+  "Kazura": [
+   "Resurrection Ban"
+  ],
+  "Yui": [
+   "Resurrection Ban"
+  ],
+  "Dana": [
+   "Resurrection Ban"
+  ],
+  "Yuzuki": [
+   "Resurrection Ban"
+  ],
+  "Sayo": [
+   "Resurrection Ban"
+  ]
+ },
+ "Naomi": {
+  "Lina": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Miyuki": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Raven": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Naomi (Chosen)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Lezbianca": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Kuro (Curvy)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Sayaka": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ]
+ },
+ "Misato": {
+  "Savannah": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Coco": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Isadora": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Haruna": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nanami": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Ayame": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Emiko (Summer)": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Marina": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Akane (Summer)": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ],
+  "Karasuya": [
+   "Mengurangi Skill Gauge target yang mengandalkan pengisian gauge"
+  ]
+ },
+ "Hina": {
+  "Kagura (Summer)": [
+   "Cleanse"
+  ],
+  "Sigrid": [
+   "Cleanse"
+  ],
+  "Symmetra": [
+   "Cleanse"
+  ],
+  "Raven": [
+   "Cleanse"
+  ],
+  "Savannah (Summer)": [
+   "Cleanse"
+  ],
+  "Savannah": [
+   "Cleanse"
+  ],
+  "Soyul": [
+   "Cleanse"
+  ],
+  "Lian": [
+   "Cleanse"
+  ],
+  "Parin": [
+   "Cleanse"
+  ],
+  "Asuka": [
+   "Cleanse"
+  ],
+  "Jass": [
+   "Cleanse"
+  ],
+  "Kirie (Summer)": [
+   "Cleanse"
+  ]
+ },
+ "Hiyori (Summer)": {
+  "Kagura (Summer)": [
+   "Cleanse"
+  ],
+  "Sigrid": [
+   "Cleanse"
+  ],
+  "Symmetra": [
+   "Cleanse"
+  ],
+  "Raven": [
+   "Cleanse"
+  ],
+  "Savannah (Summer)": [
+   "Cleanse"
+  ],
+  "Savannah": [
+   "Cleanse"
+  ],
+  "Soyul": [
+   "Cleanse"
+  ],
+  "Lian": [
+   "Cleanse"
+  ],
+  "Parin": [
+   "Cleanse"
+  ],
+  "Asuka": [
+   "Cleanse"
+  ],
+  "Jass": [
+   "Cleanse"
+  ],
+  "Kirie (Summer)": [
+   "Cleanse"
+  ]
+ },
+ "Shua": {
+  "Kuro (Summer)": [
+   "Crowd Control Shield"
+  ],
+  "Velvet": [
+   "Crowd Control Shield"
+  ],
+  "Reina": [
+   "Crowd Control Shield"
+  ],
+  "Rika": [
+   "Crowd Control Shield"
+  ],
+  "Maiko": [
+   "Crowd Control Shield"
+  ],
+  "Hinata (Summer)": [
+   "Crowd Control Shield"
+  ],
+  "Yuzuki": [
+   "Crowd Control Shield"
+  ],
+  "Akane (Summer)": [
+   "Crowd Control Shield"
+  ],
+  "Kuro (Curvy)": [
+   "Crowd Control Shield"
+  ],
+  "Sayuri": [
+   "Crowd Control Shield"
+  ]
+ },
+ "Lexi": {
+  "Kazura": [
+   "Resurrection Ban"
+  ],
+  "Yui": [
+   "Resurrection Ban"
+  ],
+  "Dana": [
+   "Resurrection Ban"
+  ],
+  "Yuzuki": [
+   "Resurrection Ban"
+  ],
+  "Sayo": [
+   "Resurrection Ban"
+  ]
+ },
+ "Hinata (Summer)": {
+  "Lina": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Miyuki": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Raven": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Naomi (Chosen)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Lezbianca": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Kuro (Curvy)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Sayaka": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ]
+ },
+ "Yuzuki": {
+  "Raven": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ],
+  "Nanami": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ],
+  "Shiro": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ],
+  "Teresa": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ]
+ },
+ "Akane (Summer)": {
+  "Lina": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Miyuki": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Raven": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Naomi (Chosen)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Lezbianca": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Kuro (Curvy)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Sayaka": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ]
+ },
+ "Sayo": {
+  "Kagura (Summer)": [
+   "Cleanse"
+  ],
+  "Sigrid": [
+   "Cleanse"
+  ],
+  "Symmetra": [
+   "Cleanse"
+  ],
+  "Raven": [
+   "Cleanse"
+  ],
+  "Savannah (Summer)": [
+   "Cleanse"
+  ],
+  "Savannah": [
+   "Cleanse"
+  ],
+  "Soyul": [
+   "Cleanse"
+  ],
+  "Lian": [
+   "Cleanse"
+  ],
+  "Parin": [
+   "Cleanse"
+  ],
+  "Asuka": [
+   "Cleanse"
+  ],
+  "Jass": [
+   "Cleanse"
+  ],
+  "Kirie (Summer)": [
+   "Cleanse"
+  ]
+ },
+ "Sayuri": {
+  "Raven": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ],
+  "Nanami": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ],
+  "Shiro": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ],
+  "Teresa": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ]
+ },
+ "Kuro": {
+  "Coco": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Haruna": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Marina": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ]
+ },
+ "Jass": {
+  "Lina": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Miyuki": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Raven": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Coco": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Haruna": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Naomi (Chosen)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Marina": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Lezbianca": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Kuro (Curvy)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Sayaka": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ]
+ },
+ "Kirie (Summer)": {
+  "Coco": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Haruna": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Marina": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ]
+ },
+ "Sayaka": {
+  "Coco": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Hinata": [
+   "Unhealable"
+  ],
+  "Tomoe": [
+   "Unhealable"
+  ],
+  "Haruna": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Aimi": [
+   "Unhealable"
+  ],
+  "Sae (Summer)": [
+   "Unhealable"
+  ],
+  "Yui": [
+   "Unhealable"
+  ],
+  "Kiyomi": [
+   "Unhealable"
+  ],
+  "Marina": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Hina": [
+   "Unhealable"
+  ],
+  "Hiyori (Summer)": [
+   "Unhealable"
+  ],
+  "Shua": [
+   "Unhealable"
+  ],
+  "Misaki": [
+   "Unhealable"
+  ],
+  "Yukino": [
+   "Unhealable"
+  ],
+  "Sae": [
+   "Unhealable"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Sayo": [
+   "Unhealable"
+  ]
+ },
+ "Garin": {
+  "Raven": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ],
+  "Kazura": [
+   "Resurrection Ban"
+  ],
+  "Hinata": [
+   "Unhealable"
+  ],
+  "Tomoe": [
+   "Unhealable"
+  ],
+  "Nanami": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ],
+  "Aimi": [
+   "Unhealable"
+  ],
+  "Sae (Summer)": [
+   "Unhealable"
+  ],
+  "Yui": [
+   "Unhealable",
+   "Resurrection Ban"
+  ],
+  "Kiyomi": [
+   "Unhealable"
+  ],
+  "Hina": [
+   "Unhealable"
+  ],
+  "Hiyori (Summer)": [
+   "Unhealable"
+  ],
+  "Shua": [
+   "Unhealable"
+  ],
+  "Misaki": [
+   "Unhealable"
+  ],
+  "Yukino": [
+   "Unhealable"
+  ],
+  "Sae": [
+   "Unhealable"
+  ],
+  "Dana": [
+   "Resurrection Ban"
+  ],
+  "Yuzuki": [
+   "Resurrection Ban"
+  ],
+  "Sayo": [
+   "Unhealable",
+   "Resurrection Ban"
+  ],
+  "Shiro": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ],
+  "Teresa": [
+   "Mengabaikan/menurunkan Evasion target yang bergantung pada menghindar"
+  ]
+ },
+ "Karasuya": {
+  "Lina": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Miyuki": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Raven": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Naomi (Chosen)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Lezbianca": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Kuro (Curvy)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Sayaka": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ]
+ },
+ "Umbae": {
+  "Lina": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Miyuki": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Raven": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Coco": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Nova": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Haruna": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Naomi (Chosen)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Marina": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Lezbianca": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Dana": [
+   "Defense Down / abaikan DEF / True damage"
+  ],
+  "Kuro (Curvy)": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ],
+  "Sayaka": [
+   "Menargetkan musuh ber-ATK tertinggi"
+  ]
+ }
+}
